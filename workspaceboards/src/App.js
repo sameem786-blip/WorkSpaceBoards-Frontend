@@ -1,6 +1,8 @@
 import "./App.css";
 import { useContext } from "react";
 import { AuthContext } from "./context/authContext";
+import Navbar from "./components/Navbar/Navbar";
+
 import {
   BrowserRouter,
   Navigate,
@@ -17,7 +19,6 @@ function App() {
   // const Layout = () => {
   //   return (
   //     <QueryClientProvider client={queryClient}>
-  //     <div className={`theme-${darkMode ? "dark" : "light"}`}>
   //       <Navbar />
   //       <div style={{display:"flex"}}>
   //         <Leftbar />
@@ -41,6 +42,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       {/* <BrowserRouter>
         <Routes>
           <Route path="/register" element={<Register />} />
