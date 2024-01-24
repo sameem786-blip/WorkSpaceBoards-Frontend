@@ -1,0 +1,10 @@
+.authContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: url("../../public/bg/1bbecb31610778a8f0afc4d9fd07a88a.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}

@@ -12,6 +12,8 @@ import {
 } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
+import AuthPage from "./pages/Auth/Auth"
+
 function App() {
   // const { currentUser } = useContext(AuthContext);
   const queryClient = new QueryClient();
@@ -55,6 +57,10 @@ function App() {
       </BrowserRouter> */}
     </div>
   );
+=======
+  return <div className="App">
+    <AuthPage />
+  </div>;
 }
 
 export default App;
