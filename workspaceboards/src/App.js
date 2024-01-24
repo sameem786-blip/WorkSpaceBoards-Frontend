@@ -57,10 +57,6 @@ function App() {
       </BrowserRouter> */}
     </div>
   );
-=======
-  return <div className="App">
-    <AuthPage />
-  </div>;
 }
 
 export default App;
