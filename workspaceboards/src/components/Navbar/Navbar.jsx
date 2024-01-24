@@ -158,7 +158,14 @@ const Navbar = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor: "#825638" }}>
+      <AppBar
+        position="static"
+        sx={{
+          backgroundColor: "#825638",
+          border: "5px solid #4d2e19",
+          borderRadius: "5px",
+        }}
+      >
         <Toolbar>
           {/* <IconButton
             size="large"
