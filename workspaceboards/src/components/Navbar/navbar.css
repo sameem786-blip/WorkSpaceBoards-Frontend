@@ -1,0 +1,14 @@
+.hoverAnimation {
+  animation: floatAnimation 2s infinite alternate;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+    /* Adjust the distance the card moves up during the animation */
+  }
+}
