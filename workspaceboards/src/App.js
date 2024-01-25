@@ -45,8 +45,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Navbar /> */}
-      <Auth />
+      <Navbar />
       {/* <BrowserRouter>
         <Routes>
           <Route path="/register" element={<Register />} />
