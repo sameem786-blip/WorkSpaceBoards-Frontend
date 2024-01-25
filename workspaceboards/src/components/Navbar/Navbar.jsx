@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     "& .MuiPaper-root": {
       backgroundColor: "transparent",
-      width: "10%",
+      width: "20%",
     },
   },
 }));
@@ -188,14 +188,20 @@ const Navbar = () => {
     <Menu
       anchorEl={mobileMoreAnchorEl}
       anchorOrigin={{
-        vertical: "top",
+        vertical: "bottom",
         horizontal: "right",
       }}
+      className={classes.root}
       id={mobileMenuId}
       keepMounted
       transformOrigin={{
         vertical: "top",
         horizontal: "right",
+      }}
+      sx={{
+        marginTop: "15px",
+        backgroundColor: "transparent",
+        opacity: "1",
       }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
@@ -208,8 +214,20 @@ const Navbar = () => {
         </IconButton>
         <p>Messages</p>
       </MenuItem> */}
-      <MenuItem>
-        <IconButton
+      <MenuItem
+        sx={{
+          width: "100%",
+          border: "5px solid #4d2e19",
+          textAlign: "center",
+          justifyContent: "center",
+          marginTop: "10%",
+          backgroundColor: "#825638",
+          "&:hover": {
+            backgroundColor: "#5e3d27", // Change the background color on hover
+          },
+        }}
+      >
+        {/* <IconButton
           size="large"
           aria-label="show 17 new notifications"
           color="inherit"
@@ -217,11 +235,23 @@ const Navbar = () => {
           <Badge badgeContent={17} color="error">
             <NotificationsIcon />
           </Badge>
-        </IconButton>
+        </IconButton> */}
         <p>Dashboard</p>
       </MenuItem>
-      <MenuItem>
-        <IconButton
+      <MenuItem
+        sx={{
+          width: "100%",
+          border: "5px solid #4d2e19",
+          textAlign: "center",
+          justifyContent: "center",
+          marginTop: "10%",
+          backgroundColor: "#825638",
+          "&:hover": {
+            backgroundColor: "#5e3d27", // Change the background color on hover
+          },
+        }}
+      >
+        {/* <IconButton
           size="large"
           aria-label="show 17 new notifications"
           color="inherit"
@@ -229,11 +259,47 @@ const Navbar = () => {
           <Badge badgeContent={17} color="error">
             <NotificationsIcon />
           </Badge>
-        </IconButton>
+        </IconButton> */}
+        <p>Notifications</p>
+      </MenuItem>
+      <MenuItem
+        sx={{
+          width: "100%",
+          border: "5px solid #4d2e19",
+          textAlign: "center",
+          justifyContent: "center",
+          marginTop: "10%",
+          backgroundColor: "#825638",
+          "&:hover": {
+            backgroundColor: "#5e3d27", // Change the background color on hover
+          },
+        }}
+      >
+        {/* <IconButton
+          size="large"
+          aria-label="show 17 new notifications"
+          color="inherit"
+        >
+          <Badge badgeContent={17} color="error">
+            <NotificationsIcon />
+          </Badge>
+        </IconButton> */}
         <p>Profile</p>
       </MenuItem>
-      <MenuItem>
-        <IconButton
+      <MenuItem
+        sx={{
+          width: "100%",
+          border: "5px solid #4d2e19",
+          textAlign: "center",
+          justifyContent: "center",
+          marginTop: "10%",
+          backgroundColor: "#825638",
+          "&:hover": {
+            backgroundColor: "#5e3d27", // Change the background color on hover
+          },
+        }}
+      >
+        {/* <IconButton
           size="large"
           aria-label="show 17 new notifications"
           color="inherit"
@@ -241,11 +307,23 @@ const Navbar = () => {
           <Badge badgeContent={17} color="error">
             <NotificationsIcon />
           </Badge>
-        </IconButton>
+        </IconButton> */}
         <p>Edit Profile</p>
       </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
+      <MenuItem
+        sx={{
+          width: "100%",
+          border: "5px solid #4d2e19",
+          textAlign: "center",
+          justifyContent: "center",
+          marginTop: "10%",
+          backgroundColor: "#825638",
+          "&:hover": {
+            backgroundColor: "#5e3d27", // Change the background color on hover
+          },
+        }}
+      >
+        {/* <IconButton
           size="large"
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
@@ -253,7 +331,7 @@ const Navbar = () => {
           color="inherit"
         >
           <AccountCircle />
-        </IconButton>
+        </IconButton> */}
         <p>Sign Out</p>
       </MenuItem>
     </Menu>
