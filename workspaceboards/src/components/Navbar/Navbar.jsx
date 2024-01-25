@@ -13,6 +13,7 @@ import Logo from "../../public/Logo/gettyimages-1447466279-640x640-removebg-prev
 import NotificationIcon from "../../public/Icons/notifications.png";
 import ProfileIcon from "../../public/Icons/profile.png";
 import { makeStyles } from "@material-ui/core";
+import TorchIcon from "../../public/Icons/pixel-art-illustration-torch-pixelated-torch-torch-fire-icon-pixelated-pixel-art-game_1038602-682-removebg-preview.png";
 // import MaterialTable from "material-table";
 import "./navbar.css";
 
@@ -60,6 +61,8 @@ const useStyles = makeStyles((theme) => ({
     "& .MuiPaper-root": {
       backgroundColor: "transparent",
       width: "20%",
+      boxShadow: "none",
+      dropShadow: "none",
     },
   },
 }));
@@ -106,7 +109,6 @@ const Navbar = () => {
       open={isMenuOpen}
       onClose={handleMenuClose}
       sx={{
-        marginTop: "15px",
         backgroundColor: "transparent",
         opacity: "1",
       }}
@@ -199,7 +201,6 @@ const Navbar = () => {
         horizontal: "right",
       }}
       sx={{
-        marginTop: "15px",
         backgroundColor: "transparent",
         opacity: "1",
       }}
@@ -433,7 +434,7 @@ const Navbar = () => {
               onClick={handleMobileMenuOpen}
               color="inherit"
             >
-              <MoreIcon />
+              <img src={TorchIcon} alt="torch" className="navbar-icon" />
             </IconButton>
           </Box>
         </Toolbar>
