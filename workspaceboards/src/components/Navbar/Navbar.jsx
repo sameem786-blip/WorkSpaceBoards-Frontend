@@ -100,6 +100,7 @@ const Navbar = () => {
       }}
       open={isMenuOpen}
       onClose={handleMenuClose}
+      backgroundColor={"transparent"}
       sx={{
         marginTop: "15px",
         backgroundColor: "#FF",
@@ -244,7 +245,7 @@ const Navbar = () => {
           backgroundColor: "#825638",
           border: "5px solid #4d2e19",
           borderRadius: "5px",
-          marginTop: "2px",
+          marginTop: "0px",
           width: "98%",
           marginLeft: "1%",
         }}
