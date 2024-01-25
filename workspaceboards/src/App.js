@@ -2,6 +2,7 @@ import "./App.css";
 import { useContext } from "react";
 import { AuthContext } from "./context/authContext";
 import Navbar from "./components/Navbar/Navbar";
+import Auth from "./pages/Auth/Auth.jsx";
 
 import {
   BrowserRouter,
@@ -12,7 +13,7 @@ import {
 } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-import AuthPage from "./pages/Auth/Auth"
+import AuthPage from "./pages/Auth/Auth";
 
 function App() {
   // const { currentUser } = useContext(AuthContext);
@@ -44,7 +45,8 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
+      <Auth />
       {/* <BrowserRouter>
         <Routes>
           <Route path="/register" element={<Register />} />
