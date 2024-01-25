@@ -55,3 +55,7 @@
     transform: scale(1.2); /* Increase size by 20% */
   }
 }
+
+.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  background-color: transparent;
+}

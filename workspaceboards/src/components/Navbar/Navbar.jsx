@@ -1,23 +1,19 @@
 import * as React from "react";
-import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import Logo from "../../public/Logo/gettyimages-1447466279-640x640-removebg-preview.png";
 import NotificationIcon from "../../public/Icons/notifications.png";
 import ProfileIcon from "../../public/Icons/profile.png";
+import { makeStyles } from "@material-ui/core";
+// import MaterialTable from "material-table";
 import "./navbar.css";
 
 // const Search = styled("div")(({ theme }) => ({
@@ -59,8 +55,16 @@ import "./navbar.css";
 //     },
 //   },
 // }));
-
+const useStyles = makeStyles((theme) => ({
+  root: {
+    "& .MuiPaper-root": {
+      backgroundColor: "transparent",
+      width: "10%",
+    },
+  },
+}));
 const Navbar = () => {
+  const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -92,6 +96,7 @@ const Navbar = () => {
         vertical: "bottom",
         horizontal: "right",
       }}
+      className={classes.root}
       id={menuId}
       keepMounted
       transformOrigin={{
@@ -100,15 +105,14 @@ const Navbar = () => {
       }}
       open={isMenuOpen}
       onClose={handleMenuClose}
-      backgroundColor={"transparent"}
       sx={{
         marginTop: "15px",
-        backgroundColor: "#FF",
+        backgroundColor: "transparent",
         opacity: "1",
       }}
       MenuListProps={{
         sx: {
-          backgroundColor: "#FF",
+          backgroundColor: "transparent",
         },
       }}
     >
@@ -116,11 +120,10 @@ const Navbar = () => {
         onClick={handleMenuClose}
         sx={{
           width: "100%",
-          borderLeft: "50px solid transparent",
-          borderRight: "50px solid transparent",
+          border: "5px solid #4d2e19",
           textAlign: "center",
           justifyContent: "center",
-          outline: "5px solid #4d2e19",
+          marginTop: "10%",
           backgroundColor: "#825638",
           "&:hover": {
             backgroundColor: "#5e3d27", // Change the background color on hover
@@ -133,10 +136,9 @@ const Navbar = () => {
         onClick={handleMenuClose}
         sx={{
           width: "100%",
-          borderLeft: "50px solid transparent",
-          borderRight: "50px solid transparent",
+          border: "5px solid #4d2e19",
+          textAlign: "center",
           justifyContent: "center",
-          outline: "5px solid #4d2e19",
           marginTop: "10%",
           backgroundColor: "#825638",
           "&:hover": {
@@ -150,11 +152,9 @@ const Navbar = () => {
         onClick={handleMenuClose}
         sx={{
           width: "100%",
-          borderLeft: "50px solid transparent",
-          borderRight: "50px solid transparent",
+          border: "5px solid #4d2e19",
           textAlign: "center",
           justifyContent: "center",
-          outline: "5px solid #4d2e19",
           marginTop: "10%",
           backgroundColor: "#825638",
           "&:hover": {
@@ -168,11 +168,9 @@ const Navbar = () => {
         onClick={handleMenuClose}
         sx={{
           width: "100%",
-          borderLeft: "50px solid transparent",
-          borderRight: "50px solid transparent",
+          border: "5px solid #4d2e19",
           textAlign: "center",
           justifyContent: "center",
-          outline: "5px solid #4d2e19",
           marginTop: "10%",
           backgroundColor: "#825638",
           "&:hover": {
