@@ -4,7 +4,7 @@
   padding: 0;
   filter: drop-shadow(0px 2px 4px #000000);
   cursor: pointer;
-  animation: floatAnimation 2s infinite alternate;
+  animation: scaleAnimation 1s infinite alternate;
 }
 
 .navbar-icons {
@@ -20,6 +20,9 @@
   margin: 0;
   padding: 0;
   width: 50px;
+  filter: drop-shadow(0px 2px 4px #000000);
+  cursor: pointer;
+  animation: reverseFloatAnimation 2s infinite alternate;
 }
 
 @keyframes floatAnimation {
@@ -30,5 +33,25 @@
   100% {
     transform: translateY(-2px);
     /* Adjust the distance the card moves up during the animation */
+  }
+}
+@keyframes reverseFloatAnimation {
+  0% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(2px);
+    /* Adjust the distance the card moves up during the animation */
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1); /* Start with normal size */
+  }
+
+  100% {
+    transform: scale(1.2); /* Increase size by 20% */
   }
 }

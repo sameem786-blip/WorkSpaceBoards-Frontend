@@ -320,11 +320,7 @@ const Navbar = () => {
                 },
               }}
             >
-              <img
-                src={ProfileIcon}
-                alt="Profile"
-                className="navbar-icons profile"
-              />
+              <img src={ProfileIcon} alt="Profile" className=" profile" />
             </IconButton>
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
