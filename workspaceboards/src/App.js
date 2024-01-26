@@ -15,6 +15,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import AuthPage from "./pages/Auth/Auth";
 import Dashboard from "./pages/Dashboard/Dashboard.jsx";
+import Loader from "./components/Loader/Loader.jsx";
 
 function App() {
   // const { currentUser } = useContext(AuthContext);
@@ -49,16 +50,17 @@ function App() {
       {/* <Navbar /> */}
       {/* <Auth content="signup" /> */}
       {/* <Dashboard /> */}
-      <BrowserRouter>
+      <Loader />
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/register" element={<Auth content="signup" />} />
-          <Route path="/login" element={<Auth content="login" />} />
-          {/* <Route path="/" element={<ProtectedRoute><Layout /></ProtectedRoute>}> */}
-          <Route path="/" element={<Dashboard />} />
-          {/* <Route path="/profile/:id" element={<Profile />} /> */}
-          {/* </Route> */}
-        </Routes>
-      </BrowserRouter>
+          <Route path="/login" element={<Auth content="login" />} /> */}
+      {/* <Route path="/" element={<ProtectedRoute><Layout /></ProtectedRoute>}> */}
+      {/* <Route path="/" element={<Dashboard />} /> */}
+      {/* <Route path="/profile/:id" element={<Profile />} /> */}
+      {/* </Route> */}
+      {/* </Routes> */}
+      {/* </BrowserRouter> */}
     </div>
   );
 }
