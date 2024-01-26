@@ -6,14 +6,6 @@ const Kiki = () => {
     <div>
       <div class="moon"></div>
       <div class="kiki bounce"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="small-star"></div>
-      <div class="small-star"></div>
-      <div class="small-star"></div>
-      <div class="small-star"></div>
     </div>
   );
 };
