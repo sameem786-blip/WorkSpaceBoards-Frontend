@@ -1,25 +1,43 @@
 .authCardContainer {
-    
+  width: 70%;
+  height: 70%;
+  background-color: #a85f2b;
+  border: 10px solid #381a04;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  /* Adjust path and values */
+  animation: floatAnimation 2s infinite alternate;
+  /* Adjust duration and other properties */
 }
-.authCardContainer {
-    width: 70%;
-        height: 70%;
-        background-color: #a85f2b;
-        border: 10px solid #381a04;
-        border-radius: 20px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    /* Adjust path and values */
-    animation: floatAnimation 2s infinite alternate;
-    /* Adjust duration and other properties */
+
+.auth-card-inner-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes floatAnimation {
-    0% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
 
-    100% {
-        transform: translateY(-10px);
-        /* Adjust the distance the card moves up during the animation */
-    }
+  100% {
+    transform: translateY(-10px);
+    /* Adjust the distance the card moves up during the animation */
+  }
+}
+
+.left-auth-container {
+  width: 50%;
+  height: 100%;
+  border: 2px solid red;
+}
+
+.right-auth-container {
+  width: 50%;
+  height: 100%;
+  border: 2px solid red;
 }
