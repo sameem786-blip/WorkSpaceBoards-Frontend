@@ -45,7 +45,8 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
+      <Auth content="login" />
       {/* <BrowserRouter>
         <Routes>
           <Route path="/register" element={<Register />} />

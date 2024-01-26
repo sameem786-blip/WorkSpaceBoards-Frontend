@@ -1,15 +1,14 @@
-import React from 'react'
-import "./auth.css"
+import React from "react";
+import "./auth.css";
 
-import AuthCard from "../../components/authCard/AuthCard"
+import AuthCard from "../../components/authCard/AuthCard";
 
-
-const Auth = () => {
+const Auth = ({ content }) => {
   return (
-      <div className='authContainer'>
-          <AuthCard />
+    <div className="authContainer">
+      <AuthCard content={content} />
     </div>
-  )
-}
+  );
+};
 
-export default Auth
+export default Auth;
