@@ -125,7 +125,7 @@ const Navbar = () => {
           border: "5px solid #4d2e19",
           textAlign: "center",
           justifyContent: "center",
-          marginTop: "10%",
+          marginTop: "5%",
           backgroundColor: "#825638",
           "&:hover": {
             backgroundColor: "#5e3d27", // Change the background color on hover
@@ -141,7 +141,7 @@ const Navbar = () => {
           border: "5px solid #4d2e19",
           textAlign: "center",
           justifyContent: "center",
-          marginTop: "10%",
+          marginTop: "5%",
           backgroundColor: "#825638",
           "&:hover": {
             backgroundColor: "#5e3d27", // Change the background color on hover
@@ -157,7 +157,7 @@ const Navbar = () => {
           border: "5px solid #4d2e19",
           textAlign: "center",
           justifyContent: "center",
-          marginTop: "10%",
+          marginTop: "5%",
           backgroundColor: "#825638",
           "&:hover": {
             backgroundColor: "#5e3d27", // Change the background color on hover
@@ -173,7 +173,7 @@ const Navbar = () => {
           border: "5px solid #4d2e19",
           textAlign: "center",
           justifyContent: "center",
-          marginTop: "10%",
+          marginTop: "5%",
           backgroundColor: "#825638",
           "&:hover": {
             backgroundColor: "#5e3d27", // Change the background color on hover
@@ -221,7 +221,7 @@ const Navbar = () => {
           border: "5px solid #4d2e19",
           textAlign: "center",
           justifyContent: "center",
-          marginTop: "10%",
+          marginTop: "3%",
           backgroundColor: "#825638",
           "&:hover": {
             backgroundColor: "#5e3d27", // Change the background color on hover
@@ -245,7 +245,7 @@ const Navbar = () => {
           border: "5px solid #4d2e19",
           textAlign: "center",
           justifyContent: "center",
-          marginTop: "10%",
+          marginTop: "3%",
           backgroundColor: "#825638",
           "&:hover": {
             backgroundColor: "#5e3d27", // Change the background color on hover
@@ -269,7 +269,7 @@ const Navbar = () => {
           border: "5px solid #4d2e19",
           textAlign: "center",
           justifyContent: "center",
-          marginTop: "10%",
+          marginTop: "3%",
           backgroundColor: "#825638",
           "&:hover": {
             backgroundColor: "#5e3d27", // Change the background color on hover
@@ -293,7 +293,7 @@ const Navbar = () => {
           border: "5px solid #4d2e19",
           textAlign: "center",
           justifyContent: "center",
-          marginTop: "10%",
+          marginTop: "3%",
           backgroundColor: "#825638",
           "&:hover": {
             backgroundColor: "#5e3d27", // Change the background color on hover
@@ -317,7 +317,7 @@ const Navbar = () => {
           border: "5px solid #4d2e19",
           textAlign: "center",
           justifyContent: "center",
-          marginTop: "10%",
+          marginTop: "3%",
           backgroundColor: "#825638",
           "&:hover": {
             backgroundColor: "#5e3d27", // Change the background color on hover
