@@ -1416,21 +1416,6 @@
     512px 784px 0 #4a4039, 496px 792px 0 #4a4039, 504px 792px 0 #4a4039;
 }
 
-.star {
-  width: 8px;
-  height: 8px;
-  box-shadow: 40px 16px 0 #ecf0f1, 40px 24px 0 #ecf0f1, 24px 32px 0 #ecf0f1,
-    32px 32px 0 #ecf0f1, 40px 32px 0 #ecf0f1, 48px 32px 0 #ecf0f1,
-    40px 40px 0 #ecf0f1;
-}
-
-.small-star {
-  width: 8px;
-  height: 8px;
-  box-shadow: 32px 32px 0 #ecf0f1, 40px 32px 0 #ecf0f1, 32px 40px 0 #ecf0f1,
-    40px 40px 0 #ecf0f1;
-}
-
 html,
 body {
   margin: 0;
