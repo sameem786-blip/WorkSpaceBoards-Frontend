@@ -9,12 +9,14 @@ const AuthCard = ({ content }) => {
         <div className="auth-card-inner-container">
           <div className="left-auth-container"></div>
           <div className="right-auth-container">
-            <Kiki />
+            <Kiki flipped={false} />
           </div>
         </div>
       ) : (
         <div className="auth-card-inner-container">
-          <div className="left-auth-container"></div>
+          <div className="left-auth-container">
+            <Kiki flipped={true} />
+          </div>
           <div className="right-auth-container"></div>
         </div>
       )}

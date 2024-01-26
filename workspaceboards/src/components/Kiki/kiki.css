@@ -1,3 +1,8 @@
+.kiki-container-flipped {
+  transform: scaleX(-1);
+  border: 2px solid red;
+}
+
 .moon {
   width: 8px;
   height: 8px;

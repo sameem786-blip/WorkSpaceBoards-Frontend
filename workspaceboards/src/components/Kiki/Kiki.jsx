@@ -1,9 +1,9 @@
 import React from "react";
 import "./kiki.css";
 
-const Kiki = () => {
+const Kiki = ({ flipped }) => {
   return (
-    <div>
+    <div className={flipped ? "kiki-container-flipped" : "kiki-container"}>
       <div class="moon"></div>
       <div class="kiki bounce"></div>
     </div>
