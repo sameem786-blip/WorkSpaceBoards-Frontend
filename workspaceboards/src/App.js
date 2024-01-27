@@ -48,9 +48,8 @@ function App() {
   return (
     <div className="App">
       {/* <Navbar /> */}
-      {/* <Auth content="signup" /> */}
+      <Auth content="login" />
       {/* <Dashboard /> */}
-      <Loader />
       {/* <BrowserRouter>
         <Routes>
           <Route path="/register" element={<Auth content="signup" />} />
