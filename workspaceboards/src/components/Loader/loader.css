@@ -12,7 +12,7 @@
 }
 
 .rotation-container {
-  animation: rotateClockwise 9s linear infinite;
+  animation: rotateClockwise 4s linear infinite;
 }
 
 .moon-loader {
@@ -648,7 +648,7 @@
     168px 384px 0 #ddeff0, 176px 384px 0 #ddeff0, 184px 384px 0 #ddeff0,
     192px 384px 0 #ddeff0, 200px 384px 0 #ddeff0, 208px 384px 0 #ddeff0,
     216px 384px 0 #ddeff0, 224px 384px 0 #ddeff0, 232px 384px 0 #ddeff0;
-    animation: increaseSize 9s ease-in-out infinite;
+    animation: increaseSize 2s ease-in-out infinite;
 }
 
 @keyframes increaseSize {

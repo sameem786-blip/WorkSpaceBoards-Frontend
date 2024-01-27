@@ -10,7 +10,7 @@ const Auth = ({ content }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 9000);
+    }, 2000);
 
     return () => clearTimeout(timer); // Cleanup timeout when component unmounts
   }, []);
