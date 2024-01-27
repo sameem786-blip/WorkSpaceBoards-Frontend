@@ -8,7 +8,7 @@ const AuthInput = ({content}) => {
               <div className="inner-input-column-container">
               <div className="input-label-container">{content === "email" ? (<label>Email Address</label>) : (<label>Password</label>)}</div>
                   <div className="inner-input-row-container">
-                      <div className="green-arrow-container"><ForwardIcon className='arrow-icon' /> </div>
+                      <div className="green-arrow-container"><ForwardIcon className='arrow-icon' id="arrow-icon" /> </div>
                       <div className='input-container'><input className='input'></input></div>
                   </div>
             </div>

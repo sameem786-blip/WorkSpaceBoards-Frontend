@@ -4,7 +4,6 @@
     justify-content: center;
     width: 100%;
     height: 20%;
-    border: 2px solid red;
 }
 
 .inner-input-column-container {
@@ -38,8 +37,8 @@
 
 }
 
-.arrow-icon {
-    display: none;
+#arrow-icon {
+    opacity: 0;
     color: green;
     animation: arrowAnimation 1s infinite;
     /* Move animation declaration outside focus selector */
@@ -83,4 +82,9 @@
         transform: translateX(5px);
         /* Slightly lower after peak */
     }
+}
+
+.input:focus + #arrow-icon {
+    color: green;
+    opacity: 1;
 }
