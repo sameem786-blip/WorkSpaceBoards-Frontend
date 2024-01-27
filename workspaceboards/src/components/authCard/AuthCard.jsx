@@ -9,7 +9,7 @@ const AuthCard = ({ content }) => {
       {content === "login" ? (
         <div className="auth-card-inner-container">
           <div className="left-auth-container">
-            <AuthForm />
+            <AuthForm login={true} />
           </div>
           <div className="right-auth-container">
             <Kiki flipped={false} />
@@ -21,7 +21,7 @@ const AuthCard = ({ content }) => {
             <Kiki flipped={true} />
           </div>
             <div className="right-auth-container">
-              <AuthForm />
+              <AuthForm login={false} />
           </div>
         </div>
       )}
