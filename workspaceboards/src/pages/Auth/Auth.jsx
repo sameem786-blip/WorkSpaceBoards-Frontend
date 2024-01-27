@@ -15,10 +15,6 @@ const Auth = ({ content }) => {
     return () => clearTimeout(timer); // Cleanup timeout when component unmounts
   }, []);
 
-  useEffect(() => {
-  console.log("loading:", loading);
-}, [loading]);
-
   return (
     <div className="authContainer">
       {loading ? <Loader /> : <AuthCard content={content} />}
