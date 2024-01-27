@@ -37,8 +37,7 @@
 
 }
 
-#arrow-icon {
-    opacity: 0;
+.arrow-icon {
     color: green;
     animation: arrowAnimation 1s infinite;
     /* Move animation declaration outside focus selector */
@@ -82,9 +81,4 @@
         transform: translateX(5px);
         /* Slightly lower after peak */
     }
-}
-
-.input:focus + #arrow-icon {
-    color: green;
-    opacity: 1;
 }
