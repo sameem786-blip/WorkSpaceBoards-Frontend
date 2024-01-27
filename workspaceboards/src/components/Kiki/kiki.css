@@ -2872,14 +2872,14 @@ body {
 
 .moon {
   position: absolute;
-  top: 50%;
+  top: 54%;
   left: 75%;
   margin-top: -225px;
   margin-left: -200px;
 }
 .moon-reversed {
   position: absolute;
-  top: 50%;
+  top: 54%;
   left: 45%;
   margin-top: -225px;
   margin-left: -200px;
