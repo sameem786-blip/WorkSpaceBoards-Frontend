@@ -25,9 +25,6 @@ const AuthForm = ({ login }) => {
       <AuthInput content="password" callback={handlePasswordChange} />
       <div className="btn-container">
         <div className="btn-row">
-          <div className="green-arrow-container">
-            <ForwardIcon />
-          </div>
           <button className="btn">
             {email ? (password ? "Sign In" : "Sign Up") : "Sign Up"}
           </button>

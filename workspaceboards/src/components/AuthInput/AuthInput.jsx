@@ -7,18 +7,20 @@ const AuthInput = ({ content, callback }) => {
     <div className="outer-input-container">
       <div className="inner-input-column-container">
         <div className="input-label-container">
-          {content === "email" ? (
-            <label className="label">Email Address</label>
-          ) : (
-            <label className="label">Password</label>
-          )}
+          <label className="label">
+            {content === "email" ? "Email Address" : "Password"}
+          </label>
         </div>
         <div className="inner-input-row-container">
           <div className="green-arrow-container">
-            <ForwardIcon className="arrow-icon" />{" "}
+            <ForwardIcon className="arrow-icon" />
           </div>
           <div className="input-container">
-            <input className="input" onChange={callback}></input>
+            <input
+              className="input"
+              onChange={callback}
+              type={content === "password" ? "password" : "email"}
+            ></input>
           </div>
         </div>
       </div>
