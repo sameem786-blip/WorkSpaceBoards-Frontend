@@ -48,7 +48,7 @@ function App() {
   return (
     <div className="App">
       {/* <Navbar /> */}
-      <Auth content="" />
+      <Auth content="login" />
       {/* <Dashboard /> */}
       {/* <BrowserRouter>
         <Routes>
