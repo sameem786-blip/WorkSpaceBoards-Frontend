@@ -8,17 +8,21 @@ const AuthForm = ({ login }) => {
   const [password, setPassword] = useState("");
 
   const handleEmailChange = (e) => {
+    e.preventDefault();
     setEmail(e.target.value);
+    console.log("email: ", email);
   };
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
+
+    console.log("password: ", password);
   };
 
   return (
     <div className="authform-container">
-      <AuthInput content="email" onChange={handleEmailChange} />
-      <AuthInput content="password" onChange={handlePasswordChange} />
+      <AuthInput content="email" callback={handleEmailChange} />
+      <AuthInput content="password" callback={handlePasswordChange} />
       <div className="btn-container">
         <div className="btn-row">
           <div className="green-arrow-container">
