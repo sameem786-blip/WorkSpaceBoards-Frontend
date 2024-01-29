@@ -11,17 +11,17 @@ const AuthCard = ({ content }) => {
           <div className="left-auth-container">
             <AuthForm login={true} />
           </div>
-          <div className="right-auth-container">
+          <div className="right-auth-container hidden">
             <Kiki flipped={false} />
           </div>
         </div>
       ) : (
         <div className="auth-card-inner-container">
-          <div className="left-auth-container">
+          <div className="left-auth-container hidden">
             <Kiki flipped={true} />
           </div>
-            <div className="right-auth-container">
-              <AuthForm login={false} />
+          <div className="right-auth-container">
+            <AuthForm login={false} />
           </div>
         </div>
       )}
