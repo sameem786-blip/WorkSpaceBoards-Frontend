@@ -28,7 +28,9 @@ const AuthForm = ({ login }) => {
           <div className="green-arrow-container">
             <ForwardIcon />
           </div>
-          <button className="btn">{login ? "Sign in" : "Sign up"}</button>
+          <button className="btn">
+            {email ? (password ? "Sign In" : "Sign Up") : "Sign Up"}
+          </button>
         </div>
       </div>
     </div>
