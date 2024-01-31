@@ -2,7 +2,6 @@ import "./App.css";
 import { useContext } from "react";
 import { AuthContext } from "./context/authContext";
 import Navbar from "./components/Navbar/Navbar";
-import Auth from "./pages/Auth/Auth.jsx";
 
 import {
   BrowserRouter,
@@ -38,7 +37,7 @@ function App() {
 
   const ProtectedRoute = ({ children }) => {
     if (!currentUser) {
-      return <Auth content="login" />
+      return <Navigate to="/login" />
     }
 
     return children;
@@ -48,8 +47,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Auth content="login" />} />
-          <Route path="/register" element={<Auth content="login" />} />
+          <Route path="/login" element={<AuthPage content="login" />} />
+          <Route path="/register" element={<AuthPage content="register" />} />
           <Route path="/" element={<ProtectedRoute><Layout /></ProtectedRoute>}>
             <Route path="/" element={<Dashboard />} />
             {/* <Route path="/profile/:id" element={<Profile />} /> */}
