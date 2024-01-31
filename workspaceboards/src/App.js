@@ -21,21 +21,20 @@ function App() {
   const { currentUser } = useContext(AuthContext);
   const queryClient = new QueryClient();
 
-  // const Layout = () => {
-  //   return (
-  //     <QueryClientProvider client={queryClient}>
-  //       <Navbar />
-  //       <div style={{display:"flex"}}>
-  //         <Leftbar />
-  //         <div style={{flex:6}}>
-  //           <Outlet />
-  //         </div>
-  //         <Rightbar />
-  //       </div>
-  //       </div>
-  //       </QueryClientProvider>
-  //   )
-  // }
+  const Layout = () => {
+    return (
+      <QueryClientProvider client={queryClient}>
+      <div>
+        <Navbar />
+        <div>
+          <div >
+            <Outlet />
+          </div>
+        </div>
+        </div>
+        </QueryClientProvider>
+    )
+  }
 
   const ProtectedRoute = ({ children }) => {
     if (!currentUser) {
