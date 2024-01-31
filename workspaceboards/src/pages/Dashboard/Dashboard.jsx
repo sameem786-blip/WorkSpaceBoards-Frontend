@@ -5,7 +5,6 @@ import Navbar from "../../components/Navbar/Navbar";
 const Dashboard = () => {
   return (
     <div className="Dashboard Container">
-      <Navbar />
     </div>
   );
 };
