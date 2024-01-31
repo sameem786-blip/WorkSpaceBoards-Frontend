@@ -21,13 +21,16 @@ export const AuthContextProvider = ({ children }) => {
     setCurrentUser(null);
     localStorage.removeItem("workspace-user");
   };
+  const signup = async(inputs) => {
+    const res = await axios.post(`${serverURL}/auth/user/signup`, inputs);
+  };
 
   useEffect(() => {
     localStorage.setItem("workspace-user", JSON.stringify(currentUser));
   }, [currentUser]);
 
   return (
-    <AuthContext.Provider value={{ currentUser, login, logout }}>
+    <AuthContext.Provider value={{ currentUser, login, logout,signup }}>
       {children}
     </AuthContext.Provider>
   );
