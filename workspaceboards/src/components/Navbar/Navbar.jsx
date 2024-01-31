@@ -17,6 +17,9 @@ import TorchIcon from "../../public/Icons/pixel-art-illustration-torch-pixelated
 // import MaterialTable from "material-table";
 import "./navbar.css";
 
+import { AuthContext } from "../../context/authContext";
+import { useContext, useState } from "react";
+
 // const Search = styled("div")(({ theme }) => ({
 //   position: "relative",
 //   borderRadius: theme.shape.borderRadius,
@@ -67,6 +70,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const Navbar = () => {
+  const { logout } = useContext(AuthContext);
+
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -167,7 +172,7 @@ const Navbar = () => {
         Edit Profile
       </MenuItem>
       <MenuItem
-        onClick={handleMenuClose}
+        onClick={logout}
         sx={{
           width: "100%",
           border: "5px solid #4d2e19",
