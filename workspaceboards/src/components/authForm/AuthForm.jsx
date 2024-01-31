@@ -25,7 +25,6 @@ const AuthForm = ({ loginStage }) => {
   };
 
   const handleSignupRedirect = () => {
-    setSignupStage(true)
     navigate("/register")
   }
 const { login } = useContext(AuthContext);
