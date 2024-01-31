@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import { useContext, useState } from "react";
 import "./authForm.css";
 import AuthInput from "../AuthInput/AuthInput";
 import ForwardIcon from "@mui/icons-material/Forward";
+import { AuthContext } from "../../context/authContext";
+import { Link, useNavigate } from "react-router-dom";
 
-const AuthForm = ({ login }) => {
+const AuthForm = ({ loginStage }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [signUpStage, setSignupStage]= useState(false)
@@ -14,6 +16,8 @@ const AuthForm = ({ login }) => {
     console.log("email: ", email);
   };
 
+  const navigate = useNavigate();
+
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
 
@@ -23,9 +27,14 @@ const AuthForm = ({ login }) => {
   const handleSignupRedirect = () => {
 setSignupStage(true)
   }
-
-  const handleLogin = () => {
-
+const { login } = useContext(AuthContext);
+  const handleLogin = async() => {
+    try {
+      await login({email,password});
+      navigate("/")
+    } catch (err) {
+      console.log(err);
+    }
   }
   const handleSignup = () => {
 
