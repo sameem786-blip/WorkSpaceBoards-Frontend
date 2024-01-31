@@ -18,7 +18,7 @@ import Dashboard from "./pages/Dashboard/Dashboard.jsx";
 import Loader from "./components/Loader/Loader.jsx";
 
 function App() {
-  // const { currentUser } = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
   const queryClient = new QueryClient();
 
   // const Layout = () => {
@@ -37,29 +37,26 @@ function App() {
   //   )
   // }
 
-  // const ProtectedRoute = ({ children }) => {
-  //   if (!currentUser) {
-  //     return <Navigate to="/login" />
-  //   }
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return <Auth content="login" />
+    }
 
-  //   return children;
-  // }
+    return children;
+  }
 
   return (
     <div className="App">
-      {/* <Navbar /> */}
-      <Auth content="login" />
-      {/* <Dashboard /> */}
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-          <Route path="/register" element={<Auth content="signup" />} />
-          <Route path="/login" element={<Auth content="login" />} /> */}
-      {/* <Route path="/" element={<ProtectedRoute><Layout /></ProtectedRoute>}> */}
-      {/* <Route path="/" element={<Dashboard />} /> */}
-      {/* <Route path="/profile/:id" element={<Profile />} /> */}
-      {/* </Route> */}
-      {/* </Routes> */}
-      {/* </BrowserRouter> */}
+          <Route path="/login" element={<Auth content="login" />} />
+          <Route path="/register" element={<Auth content="login" />} />
+          <Route path="/" element={<ProtectedRoute><Layout /></ProtectedRoute>}>
+            <Route path="/" element={<Dashboard />} />
+            {/* <Route path="/profile/:id" element={<Profile />} /> */}
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
