@@ -71,6 +71,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 const Navbar = () => {
   const { logout } = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
 
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -153,7 +154,7 @@ const Navbar = () => {
           },
         }}
       >
-        Profile
+        {currentUser.firstName} {currentUser.lastName}
       </MenuItem>
       <MenuItem
         onClick={handleMenuClose}
