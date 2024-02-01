@@ -23,10 +23,6 @@ const AuthForm = ({ loginStage }) => {
 
     console.log("password: ", password);
   };
-
-  const handleSignupRedirect = () => {
-    navigate("/register")
-  }
 const { login } = useContext(AuthContext);
   const handleLogin = async() => {
     try {
@@ -52,8 +48,11 @@ const { login } = useContext(AuthContext);
       <AuthInput content="password" callback={handlePasswordChange} />
       <div className="btn-container">
         <div className="btn-row">
-          <button className="btn" onClick={email ? (password ? (loginStage ? (handleLogin) : (handleSignupRedirect)) : (handleSignupRedirect)) : (handleSignupRedirect)  }>
-            {email ? (password ? (signUpStage ? "Sign Up" : (loginStage ? "Sign In" : "Sign Up")) : "Sign Up") : "Sign Up"}
+          <button className="btn" onClick={handleLogin}>
+            {loginStage ? "Log In" : "Sign Up"}
+          </button>
+          <button className="btn" onClick={handleSignup}>
+            {loginStage ? "Sign Up": "Log In"}
           </button>
         </div>
       </div>
