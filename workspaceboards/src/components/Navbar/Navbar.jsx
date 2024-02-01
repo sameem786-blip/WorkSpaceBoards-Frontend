@@ -154,7 +154,7 @@ const Navbar = () => {
           },
         }}
       >
-        {currentUser.firstName} {currentUser.lastName}
+        {currentUser.user.firstName} {currentUser.user.lastName}
       </MenuItem>
       <MenuItem
         onClick={handleMenuClose}
