@@ -291,9 +291,9 @@ const Navbar = () => {
             <NotificationsIcon />
           </Badge>
         </IconButton> */}
-        <p>Profile</p>
+        <p>{currentUser.user.firstName} {currentUser.user.lastName}</p>
       </MenuItem>
-      <MenuItem
+      {/* <MenuItem
         sx={{
           width: "100%",
           border: "5px solid #4d2e19",
@@ -304,8 +304,8 @@ const Navbar = () => {
           "&:hover": {
             backgroundColor: "#5e3d27", // Change the background color on hover
           },
-        }}
-      >
+        }} */}
+      {/* > */}
         {/* <IconButton
           size="large"
           aria-label="show 17 new notifications"
@@ -315,8 +315,8 @@ const Navbar = () => {
             <NotificationsIcon />
           </Badge>
         </IconButton> */}
-        <p>Edit Profile</p>
-      </MenuItem>
+        {/* <p>Edit Profile</p>
+      </MenuItem> */}
       <MenuItem
         sx={{
           width: "100%",
