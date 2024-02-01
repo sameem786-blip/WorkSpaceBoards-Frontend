@@ -156,7 +156,7 @@ const Navbar = () => {
       >
         {currentUser.user.firstName} {currentUser.user.lastName}
       </MenuItem>
-      <MenuItem
+      {/* <MenuItem
         onClick={handleMenuClose}
         sx={{
           width: "100%",
@@ -169,9 +169,9 @@ const Navbar = () => {
             backgroundColor: "#5e3d27", // Change the background color on hover
           },
         }}
-      >
-        Edit Profile
-      </MenuItem>
+      > */}
+        {/* Edit Profile
+      </MenuItem> */}
       <MenuItem
         onClick={logout}
         sx={{
