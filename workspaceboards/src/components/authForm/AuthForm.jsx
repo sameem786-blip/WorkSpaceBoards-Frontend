@@ -48,10 +48,10 @@ const { login } = useContext(AuthContext);
       <AuthInput content="password" callback={handlePasswordChange} />
       <div className="btn-container">
         <div className="btn-row">
-          <button className="btn" onClick={handleLogin}>
+          <button className="btn" onClick={loginStage ? (handleLogin) : (handleSignup)}>
             {loginStage ? "Log In" : "Sign Up"}
           </button>
-          <button className="btn" onClick={handleSignup}>
+          <button className="btn" onClick={loginStage ? (handleSignup) : (handleLogin)}>
             {loginStage ? "Sign Up": "Log In"}
           </button>
         </div>
