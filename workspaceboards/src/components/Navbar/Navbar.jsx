@@ -19,6 +19,7 @@ import "./navbar.css";
 
 import { AuthContext } from "../../context/authContext";
 import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 // const Search = styled("div")(({ theme }) => ({
 //   position: "relative",
@@ -70,6 +71,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const Navbar = () => {
+  const navigate = useNavigate();
   const { logout } = useContext(AuthContext);
   const { currentUser } = useContext(AuthContext);
 
@@ -125,7 +127,7 @@ const Navbar = () => {
       }}
     >
       <MenuItem
-        onClick={handleMenuClose}
+        onClick={() => {navigate("/")}}
         sx={{
           width: "100%",
           border: "5px solid #4d2e19",
@@ -141,7 +143,7 @@ const Navbar = () => {
         Dashboard
       </MenuItem>
       <MenuItem
-        onClick={handleMenuClose}
+        onClick={() => {navigate(`/profile/:${currentUser.user._id}`)}}
         sx={{
           width: "100%",
           border: "5px solid #4d2e19",
@@ -222,6 +224,7 @@ const Navbar = () => {
         <p>Messages</p>
       </MenuItem> */}
       <MenuItem
+        onClick={() => {navigate("/")}}
         sx={{
           width: "100%",
           border: "5px solid #4d2e19",
@@ -270,6 +273,7 @@ const Navbar = () => {
         <p>Notifications</p>
       </MenuItem>
       <MenuItem
+        onClick={() => {navigate(`/profile/:${currentUser.user._id}`)}}
         sx={{
           width: "100%",
           border: "5px solid #4d2e19",
@@ -318,6 +322,7 @@ const Navbar = () => {
         {/* <p>Edit Profile</p>
       </MenuItem> */}
       <MenuItem
+        onClick={logout}
         sx={{
           width: "100%",
           border: "5px solid #4d2e19",
