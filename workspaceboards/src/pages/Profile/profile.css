@@ -33,7 +33,6 @@
     align-items: center;
     justify-content: space-evenly;
     gap: 5px;
-    border: 2px solid red;
 }
 
 .display-picture{
@@ -47,11 +46,28 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 
 .text-row-entry{
     font-family: "Pixelify Sans", sans-serif;
     font-weight: 800;
-    font-size: 2rem;
+    font-size: 1.5rem;
 
+}
+
+.profile-action{
+    outline: none;
+        border: 3px solid #381a04;
+        border-radius: 10px;
+        height: 150%;
+        width: 100%;
+        background: #764521;
+        box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.75) inset;
+        -webkit-box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.75) inset;
+        -moz-box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.75) inset;
+        color: #a8d8d8;
+        cursor: pointer;
+        font-family: "Pixelify Sans", sans-serif;
+        font-size: 1rem;
 }
