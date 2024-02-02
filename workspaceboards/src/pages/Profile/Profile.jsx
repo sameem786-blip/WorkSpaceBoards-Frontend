@@ -24,6 +24,9 @@ const Profile = () => {
             <div className="text-row">
               <p className='text-row-entry'>Email: `changazi786`</p>
             </div>
+            <div className="text-row">
+              <button className="profile-action">Reset Password</button>
+            </div>
         </div>
       </div>
     </div>
