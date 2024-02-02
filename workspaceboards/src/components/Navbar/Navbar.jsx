@@ -72,8 +72,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 const Navbar = () => {
   const navigate = useNavigate();
-  const { logout } = useContext(AuthContext);
-  const { currentUser } = useContext(AuthContext);
+  const { logout,currentUser } = useContext(AuthContext);
 
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
