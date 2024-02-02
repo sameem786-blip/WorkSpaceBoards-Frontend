@@ -17,13 +17,13 @@ const Profile = () => {
               <p className='text-row-entry'>@username: `<span className='text-light'>changazi786</span>`</p><BorderColorIcon className='edit-icon'/>
             </div>
             <div className="text-row">
+              <p className='text-row-entry'>Email: `<span className='text-light'>changazi786</span>`</p>
+            </div>
+            <div className="text-row">
               <p className='text-row-entry'>First-name: `<span className='text-light'>changazi786</span>`</p>
             </div>
             <div className="text-row">
               <p className='text-row-entry'>Last-name: `<span className='text-light'>changazi786</span>`</p>
-            </div>
-            <div className="text-row">
-              <p className='text-row-entry'>Email: `<span className='text-light'>changazi786</span>`</p>
             </div>
             <div className="text-row">
               <button className="profile-action">Reset Password</button>
