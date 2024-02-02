@@ -75,3 +75,9 @@
 .text-light{
     color: #a8d8d8;
 }
+
+.edit-icon{
+    color: #a8d8d8;
+    font-size: small;
+    cursor: pointer;
+}
