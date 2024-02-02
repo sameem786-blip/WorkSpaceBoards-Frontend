@@ -11,6 +11,7 @@ html {
     height: 425px;
     margin-left: -120px;
     margin-top: -212.5px;
+    animation: floatAnimation 2s infinite alternate;
 }
 
 .hellboy::before {
