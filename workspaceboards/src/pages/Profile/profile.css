@@ -7,30 +7,3 @@
     height: 85vh;
 }
 
-.hellboy-container{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.profile-inner-container{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.profileCard{
-    background-color: #a85f2b;
-        border: 10px solid #381a04;
-        border-radius: 20px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-        /* Adjust path and values */
-        animation: floatAnimation 2s infinite alternate;
-        width: 70%;
-            height: 90%;
-}
