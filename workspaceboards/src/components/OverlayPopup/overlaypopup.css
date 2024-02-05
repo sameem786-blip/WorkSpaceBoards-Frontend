@@ -19,6 +19,10 @@
     height: 5%;
     border-radius: 5px 0 0 2px;
     border-bottom: 1px solid #381a04;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .middle-plank{
     width: 15%;
@@ -26,6 +30,9 @@
     height: 5%;
     border-radius: 0 2px 0 5px;
     border-bottom: 1px solid #381a04;
+    display: flex;
+        align-items: center;
+        justify-content: center;
 }
 .bottom-plank{
     width: 15%;
@@ -33,6 +40,9 @@
     height: 5%;
     border-radius: 2px 0 5px 0;
     border-bottom: 1px solid #381a04;
+    display: flex;
+        align-items: center;
+        justify-content: center;
 }
 
 .pole{
@@ -40,4 +50,31 @@
     border: none;
     background-color: #381a04;
     height: 20%;
+}
+
+.popup-board-heading{
+    color: red;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.popup-board-msg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-family: "Pixelify Sans", sans-serif;
+    font-family: "Pixelify Sans", sans-serif;
+    color: #381a04;
+}
+
+.popup-board-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 70%;
 }

@@ -49,7 +49,7 @@ function App() {
 
   return (
     <div className="App">
-      <OverlayPopup />
+      <OverlayPopup heading={ `Error!`} msg={`Invalid Password`}/>
       {/* <BrowserRouter>
         <Routes>
           <Route path="/login" element={<AuthPage content="login" />} />
