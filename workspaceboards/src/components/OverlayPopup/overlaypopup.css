@@ -12,14 +12,3 @@
         align-items: center;
 }
 
-.popup-board{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    border: 10px solid #381a04;
-    background-color: #764521;
-    width: 50%;
-    height: 50%;
-    border-radius: 50px;
-}
