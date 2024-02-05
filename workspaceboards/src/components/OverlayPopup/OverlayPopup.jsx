@@ -1,5 +1,5 @@
 import React from 'react'
-import "./overlayPopup.css"
+import "./overlaypopup.css"
 
 const OverlayPopup = () => {
   return (
