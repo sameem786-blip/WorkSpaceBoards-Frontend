@@ -2,6 +2,7 @@ import "./App.css";
 import { useContext } from "react";
 import { AuthContext } from "./context/authContext";
 import Navbar from "./components/Navbar/Navbar";
+import OverlayPopup from "./components/OverlayPopup/OverlayPopup.jsx";
 
 import {
   BrowserRouter,
@@ -48,7 +49,8 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <OverlayPopup />
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/login" element={<AuthPage content="login" />} />
           <Route path="/register" element={<AuthPage content="register" />} />
@@ -57,7 +59,7 @@ function App() {
             <Route path="/profile/:id" element={<Profile />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }
