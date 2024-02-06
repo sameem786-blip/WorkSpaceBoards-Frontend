@@ -5,7 +5,7 @@ import ForwardIcon from "@mui/icons-material/Forward";
 import { AuthContext } from "../../context/authContext";
 import { Link, useNavigate } from "react-router-dom";
 
-const AuthForm = ({ loginStage }) => {
+const AuthForm = ({ loginStage,handleError }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [signUpStage, setSignupStage]= useState(false)
@@ -29,7 +29,11 @@ const { login } = useContext(AuthContext);
       await login({email,password});
       navigate("/login")
     } catch (err) {
-      console.log(err);
+      if (err.code == "ERR_NETWORK") {
+        handleError(true,"Network Error","Try Again")
+      }
+      console.log(err.code);
+
     }
   }
   const { signup } = useContext(AuthContext);

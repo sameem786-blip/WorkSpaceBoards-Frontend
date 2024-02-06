@@ -20,8 +20,10 @@ const Auth = ({ content }) => {
     return () => clearTimeout(timer); // Cleanup timeout when component unmounts
   }, []);
 
-  const handleError = (error) => {
+  const handleError = (error, head,msg) => {
     setErr(error)
+    setErrMsg(msg)
+    setErrHeading(head)
   }
 
   return (
