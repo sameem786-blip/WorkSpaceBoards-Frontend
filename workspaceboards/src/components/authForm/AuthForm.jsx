@@ -29,13 +29,16 @@ const { login } = useContext(AuthContext);
       await login({email,password});
       navigate("/login")
     } catch (err) {
+      console.log(err.response);
       if (err.code == "ERR_NETWORK") {
         handleError(true,"Network Error","Try Again")
       }
       if (err.response.status == 401) {
         handleError(true,"Bad Request","Invalid Credentials")
       }
-      console.log(err.response.status == 401);
+      if (err.response.status == 404) {
+        handleError(true,"Not Found","Email Un-Registered")
+      }
 
     }
   }
@@ -54,8 +57,8 @@ const { login } = useContext(AuthContext);
 
   return (
     <div className="authform-container">
-      <AuthInput content="email" value={email} callback={handleEmailChange} />
-      <AuthInput content="password" value={password } callback={handlePasswordChange} />
+      <AuthInput content="email" callback={handleEmailChange} />
+      <AuthInput content="password"  callback={handlePasswordChange} />
       <div className="btn-container">
         <div className="btn-row">
           <button className="btn" onClick={loginStage ? (handleLogin) : (handleSignup)}>

@@ -2,7 +2,7 @@ import React from "react";
 import "./authInput.css";
 import ForwardIcon from "@mui/icons-material/Forward";
 
-const AuthInput = ({ content, callback,value }) => {
+const AuthInput = ({ content, callback }) => {
   return (
     <div className="outer-input-container">
       <div className="inner-input-column-container">
@@ -19,9 +19,7 @@ const AuthInput = ({ content, callback,value }) => {
             <input
               className="input"
               onChange={callback}
-              value={value}
               type={content === "password" ? "password" : "email"}
-              autoComplete="off"
             ></input>
           </div>
         </div>
