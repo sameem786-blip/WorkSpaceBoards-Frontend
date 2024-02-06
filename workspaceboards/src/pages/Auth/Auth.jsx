@@ -3,9 +3,14 @@ import "./auth.css";
 
 import AuthCard from "../../components/authCard/AuthCard";
 import Loader from "../../components/Loader/Loader";
+import OverlayPopup from "../../components/OverlayPopup/OverlayPopup";
 
 const Auth = ({ content }) => {
   const [loading, setLoading] = useState(true);
+  const [err, setErr] = useState(false)
+  const [errMsg, setErrMsg] = useState("")
+  const [errHeading, setErrHeading] = useState("")
+  
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -15,9 +20,15 @@ const Auth = ({ content }) => {
     return () => clearTimeout(timer); // Cleanup timeout when component unmounts
   }, []);
 
+  const handleError() => {
+    setErr(true)
+  }
+
   return (
     <div className="authContainer">
-      {loading ? <Loader /> : <AuthCard content={content} />}
+      {loading ? <Loader /> : (err ? <OverlayPopup heading={errHeading} msg={errMsg} /> : <AuthCard content={content} />)}
+
+      
     </div>
   );
 };
