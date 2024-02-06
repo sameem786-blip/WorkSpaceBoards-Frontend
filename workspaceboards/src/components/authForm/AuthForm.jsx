@@ -34,7 +34,7 @@ const { login } = useContext(AuthContext);
         handleError(true,"Network Error","Try Again")
       }
       if (err.response.status == 401) {
-        handleError(true,"Bad Request","Invalid Credentials")
+        handleError(true,"Bad Request","Invalid Password")
       }
       if (err.response.status == 404) {
         handleError(true,"Not Found","Email Un-Registered")
@@ -57,8 +57,8 @@ const { login } = useContext(AuthContext);
 
   return (
     <div className="authform-container">
-      <AuthInput content="email" callback={handleEmailChange} />
-      <AuthInput content="password"  callback={handlePasswordChange} />
+      <AuthInput content="email" val={email } callback={handleEmailChange} />
+      <AuthInput content="password" val={ password} callback={handlePasswordChange} />
       <div className="btn-container">
         <div className="btn-row">
           <button className="btn" onClick={loginStage ? (handleLogin) : (handleSignup)}>
