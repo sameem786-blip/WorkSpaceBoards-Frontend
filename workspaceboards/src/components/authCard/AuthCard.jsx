@@ -3,13 +3,13 @@ import "./authCard.css";
 import Kiki from "../Kiki/Kiki";
 import AuthForm from "../authForm/AuthForm";
 
-const AuthCard = ({ content }) => {
+const AuthCard = ({ content, handleError }) => {
   return (
     <div className="authCardContainer">
       {content === "login" ? (
         <div className="auth-card-inner-container">
           <div className="left-auth-container">
-            <AuthForm loginStage={true} />
+            <AuthForm handleError={ handleError} loginStage={true} />
           </div>
           <div className="right-auth-container hidden">
             <Kiki flipped={false} />

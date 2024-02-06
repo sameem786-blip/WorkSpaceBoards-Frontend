@@ -20,13 +20,13 @@ const Auth = ({ content }) => {
     return () => clearTimeout(timer); // Cleanup timeout when component unmounts
   }, []);
 
-  const handleError = () => {
-    setErr(true)
+  const handleError = (error) => {
+    setErr(error)
   }
 
   return (
     <div className="authContainer">
-      {loading ? <Loader /> : (err ? <OverlayPopup heading={errHeading} msg={errMsg} /> : <AuthCard content={content} />)}
+      {loading ? <Loader /> : (err ? <OverlayPopup heading={errHeading} msg={errMsg} /> : <AuthCard handleError={handleError } content={content} />)}
 
       
     </div>
