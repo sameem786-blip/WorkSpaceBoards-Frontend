@@ -49,8 +49,8 @@ function App() {
 
   return (
     <div className="App">
-      <OverlayPopup heading={ `Error!`} msg={`Invalid Password`}/>
-      {/* <BrowserRouter>
+      {/* <OverlayPopup heading={ `Error!`} msg={`Invalid Password`}/> */}
+      <BrowserRouter>
         <Routes>
           <Route path="/login" element={<AuthPage content="login" />} />
           <Route path="/register" element={<AuthPage content="register" />} />
@@ -59,7 +59,7 @@ function App() {
             <Route path="/profile/:id" element={<Profile />} />
           </Route>
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </div>
   );
 }
