@@ -32,7 +32,10 @@ const { login } = useContext(AuthContext);
       if (err.code == "ERR_NETWORK") {
         handleError(true,"Network Error","Try Again")
       }
-      console.log(err.code);
+      if (err.response.status == 401) {
+        handleError(true,"Bad Request","Invalid Credentials")
+      }
+      console.log(err.response.status == 401);
 
     }
   }
@@ -41,7 +44,10 @@ const { login } = useContext(AuthContext);
     try {
           await signup({email,password});
           navigate("/login")
-        } catch (err) {
+    } catch (err) {
+      if (err.code == "ERR_NETWORK") {
+        handleError(true,"Network Error","Try Again")
+      }
           console.log(err);
         }
   }
