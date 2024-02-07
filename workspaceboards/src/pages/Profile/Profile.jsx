@@ -7,6 +7,8 @@ import Hellboy from '../../components/Hellboy/Hellboy'
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import AuthInput from '../../components/AuthInput/AuthInput';
 
+import { Link, useNavigate } from "react-router-dom";
+
 import config from "../../config/config.json";
 
 const serverURL = config.serverURL;
@@ -18,6 +20,10 @@ const Profile = () => {
   const [ newUsername, setNewUsername ] = useState("")
   const [ newFirstname, setNewFirstname ] = useState("")
   const [ newLastname, setNewLastname ] = useState("")
+  
+  const [toChange, setToChange] = useState("");
+
+  const navigate = useNavigate();
   
   const handleEditProfileClick = (edit) => {
     setEditProfile(true);
@@ -44,20 +50,24 @@ const Profile = () => {
     }
   }
 
+  const handleEntry = (e) => {
+    setToChange(e.target.value)
+  }
+
   const handleUpdateClick = async() => {
     try {
       let response
       if (edit == "Username") {
         response = await axios.put(`${serverURL}/api/user/updateUsername`, {
-          username: edit,
+          username: toChange,
         },
           {headers: {
           Authorization: `Bearer ${currentUser.token}`,
         }}
         );
 
-        console.log(response);
-        console.log(currentUser)
+        currentUser.user.username = toChange
+        setEditProfile(false)
       }
       else if (edit == "First Name") {
       response = await axios.put(`${serverURL}/api/user/updateFirstname`, {
@@ -89,7 +99,7 @@ response = await axios.put(`${serverURL}/api/user/updateLastname`, {
             </div>
             <div className="text-column">
               <label className='profile-input-label'>New {edit}</label>
-              <input className='profile-input'></input>
+              <input className='profile-input' value={toChange} onChange={handleEntry}></input>
             </div>
             <div className="text-row">
               <button className="profile-action" onClick={handleUpdateClick}>Update {edit }</button>
