@@ -50,7 +50,7 @@ const Profile = () => {
             <p className='text-row-entry'>@username: `<span className='text-light'>{currentUser.user.username}</span>`</p>
             </div>
             <div className="text-row">
-              <AuthInput content="New Username" callback={ handleNewChange} />
+              <AuthInput content={edit == "Username" ? ("New Username") : (edit == "FirstName" ? ("New First Name") : ("New Last Name") )} callback={ handleNewChange} />
             </div>
             <div className="text-row">
               <button className="profile-action">Update {edit }</button>
