@@ -26,6 +26,10 @@ const AuthForm = ({ loginStage,handleError }) => {
 const { login } = useContext(AuthContext);
   const handleLogin = async() => {
     try {
+      if (email == "" || password == "") {
+        handleError(true, "Hold It!!", "Fill both fields Warrior.")
+        return;
+          }
       await login({email,password});
       navigate("/")
     } catch (err) {
@@ -45,6 +49,9 @@ const { login } = useContext(AuthContext);
   const { signup } = useContext(AuthContext);
   const handleSignup = async() => {
     try {
+      if (email == "" || password == "") {
+            handleError(true,"Hold It!!","Fill both fields Warrior.")
+          }
           await signup({email,password});
           navigate("/login")
     } catch (err) {
