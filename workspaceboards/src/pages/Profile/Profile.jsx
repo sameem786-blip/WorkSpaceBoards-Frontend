@@ -50,7 +50,11 @@ const Profile = () => {
       if (edit == "Username") {
         response = await axios.put(`${serverURL}/api/user/updateUsername`, {
           username: edit,
-        });
+        },
+          {headers: {
+          Authorization: `Bearer ${currentUser.token}`,
+        }}
+        );
 
         console.log(response);
         console.log(currentUser)
