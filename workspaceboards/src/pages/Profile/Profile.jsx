@@ -9,7 +9,10 @@ import AuthInput from '../../components/AuthInput/AuthInput';
 const Profile = () => {
   const { currentUser } = useContext(AuthContext);
   const [ editProfile, setEditProfile ] = useState(false)
-  const [ edit, setEdit ] = useState(false)
+  const [ edit, setEdit ] = useState("")
+  const [ newUsername, setNewUsername ] = useState("")
+  const [ newFirstname, setNewFirstname ] = useState("")
+  const [ newLastname, setNewLastname ] = useState("")
   
   const handleEditProfileClick = (edit) => {
     setEditProfile(true);
@@ -17,6 +20,22 @@ const Profile = () => {
     console.log(edit)
     setEdit(edit)
     console.log(editProfile)
+  }
+
+  const handleNewChange = (e) => {
+    if (edit == "Username") {
+      e.preventDefault();
+      setNewUsername(e.target.value)
+    }
+    else if (edit == "First Name") {
+      e.preventDefault();
+      setNewFirstname(e.target.value)
+    }
+    else if (edit == "Last Name") {
+      e.preventDefault();
+      setNewLastname(e.target.value)
+    } else {
+    }
   }
   return (
     <div className='profile-container'>
@@ -31,7 +50,7 @@ const Profile = () => {
             <p className='text-row-entry'>@username: `<span className='text-light'>{currentUser.user.username}</span>`</p>
             </div>
             <div className="text-row">
-              <AuthInput content="New Username" />
+              <AuthInput content="New Username" callback={ handleNewChange} />
             </div>
             <div className="text-row">
               <button className="profile-action">Update {edit }</button>
