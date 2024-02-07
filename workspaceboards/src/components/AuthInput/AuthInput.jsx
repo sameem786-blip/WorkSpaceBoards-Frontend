@@ -8,7 +8,7 @@ const AuthInput = ({ content, callback,val }) => {
       <div className="inner-input-column-container">
         <div className="input-label-container">
           <label className="label">
-            {content === "email" ? "Email Address" : "Password"}
+            {content}
           </label>
         </div>
         <div className="inner-input-row-container">
