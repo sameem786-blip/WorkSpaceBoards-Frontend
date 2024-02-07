@@ -48,10 +48,16 @@ const { login } = useContext(AuthContext);
           await signup({email,password});
           navigate("/login")
     } catch (err) {
+      console.log(err.response);
       if (err.code == "ERR_NETWORK") {
         handleError(true,"Network Error","Try Again")
       }
-          console.log(err);
+      if (err.response.status == 400) {
+        handleError(true,"Bad Request","Invalid Email Or Password")
+      }
+      if (err.response.status == 409) {
+        handleError(true,"Oops","Email already Registered")
+      }
         }
   }
 
