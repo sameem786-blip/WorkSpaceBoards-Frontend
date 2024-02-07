@@ -51,6 +51,9 @@ const Profile = () => {
         response = await axios.put(`${serverURL}/api/user/updateUsername`, {
           username: edit,
         });
+
+        console.log(response);
+        console.log(currentUser)
       }
       else if (edit == "First Name") {
       response = await axios.put(`${serverURL}/api/user/updateFirstname`, {
