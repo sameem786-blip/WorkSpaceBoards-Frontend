@@ -1,10 +1,15 @@
 import {useContext, useState} from 'react'
 import { AuthContext } from "../../context/authContext";
 import "./profile.css"
+import axios from "axios";
 
 import Hellboy from '../../components/Hellboy/Hellboy'
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import AuthInput from '../../components/AuthInput/AuthInput';
+
+import config from "../../config/config.json";
+
+const serverURL = config.serverURL;
 
 const Profile = () => {
   const { currentUser } = useContext(AuthContext);
@@ -35,6 +40,32 @@ const Profile = () => {
       e.preventDefault();
       setNewLastname(e.target.value)
     } else {
+      return;
+    }
+  }
+
+  const handleUpdateClick = async() => {
+    try {
+      let response
+      if (edit == "Username") {
+        response = await axios.put(`${serverURL}/api/user/updateUsername`, {
+          username: edit,
+        });
+      }
+      else if (edit == "First Name") {
+      response = await axios.put(`${serverURL}/api/user/updateFirstname`, {
+          firstName: edit,
+        });
+      }
+      else if (edit == "Last Name") {
+response = await axios.put(`${serverURL}/api/user/updateLastname`, {
+          lastName: edit,
+        });
+      } else {
+        return;
+      }
+    } catch (err) {
+      
     }
   }
   return (
@@ -54,7 +85,7 @@ const Profile = () => {
               <input className='profile-input'></input>
             </div>
             <div className="text-row">
-              <button className="profile-action">Update {edit }</button>
+              <button className="profile-action" onClick={handleUpdateClick}>Update {edit }</button>
             </div>
           </div>
         ) : (
