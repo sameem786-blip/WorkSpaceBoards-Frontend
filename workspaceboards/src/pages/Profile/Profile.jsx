@@ -49,8 +49,9 @@ const Profile = () => {
             <div className="text-row">
             <p className='text-row-entry'>@username: `<span className='text-light'>{currentUser.user.username}</span>`</p>
             </div>
-            <div className="text-row">
-              <AuthInput content={edit == "Username" ? ("New Username") : (edit == "FirstName" ? ("New First Name") : ("New Last Name") )} callback={ handleNewChange} />
+            <div className="text-column">
+              <label className='profile-input-label'>New {edit}</label>
+              <input className='profile-input'></input>
             </div>
             <div className="text-row">
               <button className="profile-action">Update {edit }</button>
