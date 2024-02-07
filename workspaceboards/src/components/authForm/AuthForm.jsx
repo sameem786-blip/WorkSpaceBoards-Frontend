@@ -63,8 +63,8 @@ const { login } = useContext(AuthContext);
 
   return (
     <div className="authform-container">
-      <AuthInput content="email" val={email } callback={handleEmailChange} />
-      <AuthInput content="password" val={ password} callback={handlePasswordChange} />
+      <AuthInput content="Email Address" val={email } callback={handleEmailChange} />
+      <AuthInput content="Password" val={ password} callback={handlePasswordChange} />
       <div className="btn-container">
         <div className="btn-row">
           <button className="btn" onClick={loginStage ? (handleLogin) : (handleSignup)}>
