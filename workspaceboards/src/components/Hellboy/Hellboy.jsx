@@ -3,7 +3,7 @@ import "./hellboy.css"
 
 const Hellboy = () => {
   return (
-    <div class="hellboy"></div>
+    <div className="hellboy"></div>
   )
 }
 
