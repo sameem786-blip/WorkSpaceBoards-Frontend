@@ -27,7 +27,7 @@ const { login } = useContext(AuthContext);
   const handleLogin = async() => {
     try {
       await login({email,password});
-      navigate("/login")
+      navigate("/")
     } catch (err) {
       console.log(err.response);
       if (err.code == "ERR_NETWORK") {
