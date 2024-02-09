@@ -68,16 +68,30 @@ const Profile = () => {
 
         currentUser.user.username = toChange
         setEditProfile(false)
+        setEdit("")
       }
       else if (edit == "First Name") {
       response = await axios.put(`${serverURL}/api/user/updateFirstname`, {
-          firstName: edit,
-        });
+          firstName: toChange,
+        },{headers: {
+          Authorization: `Bearer ${currentUser.token}`,
+        }});
+
+        currentUser.user.firstName = toChange
+        setEditProfile(false);
+        setEdit("")
       }
       else if (edit == "Last Name") {
 response = await axios.put(`${serverURL}/api/user/updateLastname`, {
-          lastName: edit,
-        });
+          lastName: toChange,
+        },{headers: {
+          Authorization: `Bearer ${currentUser.token}`,
+}
+});
+        
+        currentUser.user.lastName = toChange
+        setEditProfile(false);
+        setEdit("")
       } else {
         return;
       }
