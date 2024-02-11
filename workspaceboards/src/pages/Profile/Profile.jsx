@@ -95,6 +95,9 @@ response = await axios.put(`${serverURL}/api/user/updateLastname`, {
       } else {
         return;
       }
+
+      localStorage.setItem("workspace-user", JSON.stringify(currentUser));
+      window.location.reload(); 
     } catch (err) {
       
     }
