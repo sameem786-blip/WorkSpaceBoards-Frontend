@@ -103,6 +103,10 @@ response = await axios.put(`${serverURL}/api/user/updateLastname`, {
       
     }
   }
+
+  const handlePasswordResetStateChange = () => {
+    setPasswordResetState(true)
+  }
   return (
     <div className='profile-container'>
       <div className="profileCard">
