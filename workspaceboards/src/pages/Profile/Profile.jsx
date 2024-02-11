@@ -139,7 +139,7 @@ response = await axios.put(`${serverURL}/api/user/updateLastname`, {
               <p className='text-row-entry'>Last-name: `<span className='text-light'>{currentUser.user.lastName}</span>`</p><BorderColorIcon onClick={() => handleEditProfileClick("Last Name")} className='edit-icon'/>
             </div>
             <div className="text-row">
-                <button className="profile-action" onClick={() => handleEditProfileClick("Password")}>Reset Password</button>
+                <button className="profile-action" onClick={handlePasswordResetStateChange}>Reset Password</button>
             </div>
         </div>  
         )}
