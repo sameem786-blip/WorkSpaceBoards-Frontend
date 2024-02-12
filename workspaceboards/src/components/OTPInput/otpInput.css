@@ -1,0 +1,7 @@
+.otp-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    border: 2px solid red;
+}

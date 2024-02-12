@@ -129,7 +129,9 @@ response = await axios.put(`${serverURL}/api/user/updateLastname`, {
             </div>
           </div>
         ) : (passwordResetState ? (
-        <OtpInput />
+            <div className="right-section">
+              <OtpInput />
+              </div>
         ): (
             <div className="right-section">
           <img src="https://cdn.dribbble.com/users/2878951/screenshots/14013747/media/603f0b853c409547dfa51cba996f375c.png?resize=1000x750&vertical=center" className='display-picture' />
