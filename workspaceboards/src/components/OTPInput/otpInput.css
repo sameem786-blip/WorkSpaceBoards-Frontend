@@ -16,3 +16,20 @@
     justify-content: center;
 }
 
+.otp-label{
+font-family: "Pixelify Sans", sans-serif;
+    color: #a8d8d8;
+    font-weight: 500;
+    font-size: 1vw;
+}
+
+.otp-input-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.otp-input{
+    
+}
