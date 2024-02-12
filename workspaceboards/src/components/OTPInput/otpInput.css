@@ -1,7 +1,18 @@
 .otp-container{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 90%;
     height: 50%;
     border: 2px solid red;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
+
+.otp-msg{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
