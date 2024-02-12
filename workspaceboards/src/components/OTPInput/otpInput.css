@@ -3,7 +3,6 @@
     flex-direction: column;
     width: 90%;
     height: 50%;
-    border: 2px solid red;
     align-items: center;
     justify-content: center;
     gap: 30px;
@@ -31,5 +30,14 @@ font-family: "Pixelify Sans", sans-serif;
 }
 
 .otp-input{
-    
+    width: 7%;
+        /* Adjust the width as needed */
+        padding: 10px;
+        /* Adjust padding as needed */
+        box-sizing: border-box;
+        /* Ensure padding is included in the width */
+        aspect-ratio: 1 / 1;
+        outline: none;
+        border: 3px solid #381a04;
+            border-radius: 10px;
 }
