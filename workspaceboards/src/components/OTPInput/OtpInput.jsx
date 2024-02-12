@@ -3,7 +3,14 @@ import "./otpInput.css"
 
 const OtpInput = () => {
   return (
-    <div>OtpInput</div>
+    <div className='otp-container'>
+      <div className="otp-input-row">
+        <input className='otp-input'></input>
+        <input className='otp-input'></input>
+        <input className='otp-input'></input>
+        <input className='otp-input'></input>
+      </div>
+    </div>
   )
 }
 
