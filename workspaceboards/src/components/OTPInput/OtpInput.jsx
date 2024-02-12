@@ -1,5 +1,5 @@
 import React from 'react'
-import "./OtpInput.css"
+import "./otpInput.css"
 
 const OtpInput = () => {
   return (
