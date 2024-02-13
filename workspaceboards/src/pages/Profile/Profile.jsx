@@ -112,6 +112,12 @@ response = await axios.put(`${serverURL}/api/user/updateLastname`, {
         email: currentUser.user.email
       });
 
+      if (response.status == 200) {
+        setPasswordResetState(true);
+      } else {
+        window.location.reload();
+      }
+
     } catch (err) {
       console.log(err)
     }
