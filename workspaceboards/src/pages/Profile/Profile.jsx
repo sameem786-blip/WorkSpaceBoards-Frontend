@@ -105,8 +105,14 @@ response = await axios.put(`${serverURL}/api/user/updateLastname`, {
     }
   }
 
-  const handlePasswordResetStateChange = () => {
-    setPasswordResetState(true)
+  const handlePasswordResetStateChange = async() => {
+    setPasswordResetState(true);
+    try {
+      const response = await axios.post(`${serverURL}/auth/user/forgetPassword/sendOTP`);
+      
+    } catch (err) {
+      console.log(err)
+    }
   }
   return (
     <div className='profile-container'>
