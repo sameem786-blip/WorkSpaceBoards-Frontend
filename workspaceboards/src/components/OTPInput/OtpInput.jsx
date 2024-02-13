@@ -20,6 +20,10 @@ const OtpInput = () => {
       setOtp4(e.target.value)
     }
   }
+
+  const submitOtp = async () => {
+    
+  }
   return (
     <div className='otp-container'>
       <div className='otp-msg'>
@@ -30,6 +34,9 @@ const OtpInput = () => {
         <input className='otp-input' value={ otp1} name="otp2" type="number" onChange={ handleOtpInput} maxlength="1" min="0" max="9" step="1"></input>
         <input className='otp-input' value={ otp1} name="otp3" type="number"  onChange={ handleOtpInput} maxlength="1" min="0" max="9" step="1"></input>
         <input className='otp-input' value={ otp1} name="otp4" type="number" onChange={ handleOtpInput} maxlength="1" min="0" max="9" step="1"></input>
+      </div>
+      <div className='otp-submit'>
+        <button className='btn'>Submit</button>
       </div>
     </div>
   )
