@@ -108,8 +108,10 @@ response = await axios.put(`${serverURL}/api/user/updateLastname`, {
   const handlePasswordResetStateChange = async() => {
     setPasswordResetState(true);
     try {
-      const response = await axios.post(`${serverURL}/auth/user/forgetPassword/sendOTP`);
-      
+      const response = await axios.post(`${serverURL}/auth/user/forgetPassword/sendOTP`, {
+        email: currentUser.user.email
+      });
+
     } catch (err) {
       console.log(err)
     }
