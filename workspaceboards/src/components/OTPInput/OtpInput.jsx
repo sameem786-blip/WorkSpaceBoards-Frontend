@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./otpInput.css";
+import axios from "axios";
 
 const OtpInput = () => {
   const [otp1, setOtp1] = useState("");
@@ -30,10 +31,17 @@ const OtpInput = () => {
     }
   };
 
-  const submitOtp = () => {
+  const submitOtp = async () => {
     const otp = otp1 + otp2 + otp3 + otp4;
     // Implement your OTP submission logic here
     console.log("OTP submitted:", otp);
+    const response = await axios.put(`${serverURL}/auth/user/forgetPassword/submitOTP`, {
+          username: toChange,
+        },
+          {headers: {
+          Authorization: `Bearer ${currentUser.token}`,
+        }}
+        );
   };
 
   return (
