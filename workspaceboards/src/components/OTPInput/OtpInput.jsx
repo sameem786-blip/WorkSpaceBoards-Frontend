@@ -36,7 +36,8 @@ const OtpInput = () => {
     // Implement your OTP submission logic here
     console.log("OTP submitted:", otp);
     const response = await axios.post(`${serverURL}/auth/user/forgetPassword/submitOTP`, {
-          username: toChange,
+      otp: otp,
+      email: currentUser.user.email
         },
           {headers: {
           Authorization: `Bearer ${currentUser.token}`,
