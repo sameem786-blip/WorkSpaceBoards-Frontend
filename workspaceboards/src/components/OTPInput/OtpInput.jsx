@@ -35,7 +35,7 @@ const OtpInput = () => {
     const otp = otp1 + otp2 + otp3 + otp4;
     // Implement your OTP submission logic here
     console.log("OTP submitted:", otp);
-    const response = await axios.put(`${serverURL}/auth/user/forgetPassword/submitOTP`, {
+    const response = await axios.post(`${serverURL}/auth/user/forgetPassword/submitOTP`, {
           username: toChange,
         },
           {headers: {
