@@ -46,7 +46,8 @@ const OtpInput = () => {
   };
 
   const submitOtp = async () => {
-    const otp = otp1 + otp2 + otp3 + otp4;
+    try {
+      const otp = otp1 + otp2 + otp3 + otp4;
     // Implement your OTP submission logic here
     console.log("OTP submitted:", otp);
     const response = await axios.post(`${serverURL}/auth/user/forgetPassword/submitOTP`, {
@@ -56,10 +57,10 @@ const OtpInput = () => {
           {headers: {
           Authorization: `Bearer ${currentUser.token}`,
         }}
-    );
-    
-    if (response.status == 200) {
+      );
       navigate("/resetPassword")
+    }catch (err) {
+      console.log(err)
     }
   };
 
