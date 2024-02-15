@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import {useContext, useState} from 'react'
 import "./otpInput.css";
 import axios from "axios";
 import { AuthContext } from "../../context/authContext";
