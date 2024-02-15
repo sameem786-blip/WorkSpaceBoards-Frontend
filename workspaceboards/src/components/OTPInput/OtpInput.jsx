@@ -20,6 +20,7 @@ const OtpInput = () => {
   const [otp4, setOtp4] = useState("");
 
   const { currentUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleOtpInput = (e) => {
     const { name, value } = e.target;
@@ -55,7 +56,11 @@ const OtpInput = () => {
           {headers: {
           Authorization: `Bearer ${currentUser.token}`,
         }}
-        );
+    );
+    
+    if (response.status == 200) {
+      navigate("/resetPassword")
+    }
   };
 
   return (
