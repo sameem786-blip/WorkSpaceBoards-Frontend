@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import "./otpInput.css";
 import axios from "axios";
+import AuthInput from '../../components/AuthInput/AuthInput';
+const { currentUser } = useContext(AuthContext);
 
 const OtpInput = () => {
   const [otp1, setOtp1] = useState("");
