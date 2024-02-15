@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import "./otpInput.css";
 import axios from "axios";
-import AuthInput from '../../components/AuthInput/AuthInput';
+import { AuthContext } from "../../context/authContext";
+
+import config from "../../config/config.json";
 const { currentUser } = useContext(AuthContext);
+const serverURL = config.serverURL;
 
 const OtpInput = () => {
   const [otp1, setOtp1] = useState("");
