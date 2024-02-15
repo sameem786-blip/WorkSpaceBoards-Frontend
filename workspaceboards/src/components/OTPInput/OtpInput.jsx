@@ -1,10 +1,16 @@
 import {useContext, useState} from 'react'
-import "./otpInput.css";
-import axios from "axios";
 import { AuthContext } from "../../context/authContext";
+import "./otpInput.css"
+import axios from "axios";
+
+import Hellboy from '../../components/Hellboy/Hellboy'
+import BorderColorIcon from '@mui/icons-material/BorderColor';
+import AuthInput from '../../components/AuthInput/AuthInput';
+
+import { Link, useNavigate } from "react-router-dom";
 
 import config from "../../config/config.json";
-const { currentUser } = useContext(AuthContext);
+
 const serverURL = config.serverURL;
 
 const OtpInput = () => {
@@ -12,6 +18,8 @@ const OtpInput = () => {
   const [otp2, setOtp2] = useState("");
   const [otp3, setOtp3] = useState("");
   const [otp4, setOtp4] = useState("");
+
+  const { currentUser } = useContext(AuthContext);
 
   const handleOtpInput = (e) => {
     const { name, value } = e.target;
