@@ -16,6 +16,7 @@ const serverURL = config.serverURL;
 
 const Profile = () => {
   const { currentUser } = useContext(AuthContext);
+  const [err, setErr] = useState(false)
   const [passwordResetState, setPasswordResetState] = useState(false)
   const [ editProfile, setEditProfile ] = useState(false)
   const [ edit, setEdit ] = useState("")
@@ -126,7 +127,10 @@ response = await axios.put(`${serverURL}/api/user/updateLastname`, {
     <div className='profile-container'>
       <div className="profileCard">
         <div className="left-section">
-          <Hellboy />
+          {err ? () : (
+
+            <Hellboy />
+          )}
         </div>
         {editProfile ?(
           <div className="right-section">
