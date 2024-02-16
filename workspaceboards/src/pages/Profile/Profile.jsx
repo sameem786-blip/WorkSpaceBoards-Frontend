@@ -17,7 +17,7 @@ const serverURL = config.serverURL;
 
 const Profile = () => {
   const { currentUser } = useContext(AuthContext);
-  const [err, setErr] = useState(false);
+  const [err, setErr] = useState(true);
   const [passwordResetState, setPasswordResetState] = useState(false);
   const [editProfile, setEditProfile] = useState(false);
   const [edit, setEdit] = useState("");
@@ -146,6 +146,7 @@ const Profile = () => {
             <img
               src="https://cdn.dribbble.com/users/2878951/screenshots/14013747/media/603f0b853c409547dfa51cba996f375c.png?resize=1000x750&vertical=center"
               className="display-picture"
+              alt="xyz"
             />
             <div className="text-row">
               <p className="text-row-entry">
