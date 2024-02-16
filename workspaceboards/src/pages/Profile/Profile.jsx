@@ -18,6 +18,8 @@ const serverURL = config.serverURL;
 const Profile = () => {
   const { currentUser } = useContext(AuthContext);
   const [err, setErr] = useState(true);
+  const [errMsg, setErrMsg] = useState("");
+  const [errHeading, setErrHeading] = useState("");
   const [passwordResetState, setPasswordResetState] = useState(false);
   const [editProfile, setEditProfile] = useState(false);
   const [edit, setEdit] = useState("");
