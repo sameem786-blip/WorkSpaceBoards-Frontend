@@ -39,6 +39,12 @@ const Profile = () => {
     console.log(editProfile);
   };
 
+  const handleError = (error, head, msg) => {
+    setErr(error);
+    setErrMsg(msg);
+    setErrHeading(head);
+  };
+
   const handleNewChange = (e) => {
     if (edit == "Username") {
       e.preventDefault();
