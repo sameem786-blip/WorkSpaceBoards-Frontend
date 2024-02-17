@@ -2,7 +2,7 @@ import React from 'react'
 
 const Tower = () => {
   return (
-    <div>Tower</div>
+    <div className='tower-container'></div>
   )
 }
 
