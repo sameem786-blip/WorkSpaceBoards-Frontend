@@ -143,6 +143,7 @@ const Profile = () => {
       }
     } catch (err) {
       console.log(err);
+      setErr(true)
     }
   };
   return (
