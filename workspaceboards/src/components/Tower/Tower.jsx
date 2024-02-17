@@ -1,4 +1,5 @@
 import React from 'react'
+import "./tower.css"
 
 const Tower = () => {
   return (
