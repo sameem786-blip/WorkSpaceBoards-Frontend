@@ -121,7 +121,9 @@ const Profile = () => {
 
       localStorage.setItem("workspace-user", JSON.stringify(currentUser));
       window.location.reload();
-    } catch (err) {}
+    } catch (err) {
+      setErr(true)
+    }
   };
 
   const handlePasswordResetStateChange = async () => {
