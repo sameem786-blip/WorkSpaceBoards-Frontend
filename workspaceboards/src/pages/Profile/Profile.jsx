@@ -17,7 +17,7 @@ const serverURL = config.serverURL;
 
 const Profile = () => {
   const { currentUser } = useContext(AuthContext);
-  const [err, setErr] = useState(true);
+  const [err, setErr] = useState(false);
   const [errMsg, setErrMsg] = useState("");
   const [errHeading, setErrHeading] = useState("");
   const [passwordResetState, setPasswordResetState] = useState(false);
