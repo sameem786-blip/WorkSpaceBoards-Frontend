@@ -148,9 +148,10 @@ const Profile = () => {
   };
   return (
     <div className="profile-container">
-      <div className="profileCard">
+      {err ? (<OverlayPopup />) : (
+        <div className="profileCard">
         <div className="left-section">
-          {err ? <OverlayPopup /> : <Hellboy />}
+          <Hellboy />
         </div>
         {editProfile ? (
           <div className="right-section">
@@ -244,6 +245,8 @@ const Profile = () => {
           </div>
         )}
       </div>
+      )}
+      
     </div>
   );
 };

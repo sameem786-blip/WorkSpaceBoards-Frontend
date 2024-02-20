@@ -1,3 +1,20 @@
+@media screen and (max-width: 1200px) {
+    .left-section {
+            display: none;
+        }
+
+        .right-section{
+            width: 90%;
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                gap: 5px;
+                border: 2px solid red;
+        }
+}
+
 .profile-container{
     display: flex;
     flex-direction: row;
