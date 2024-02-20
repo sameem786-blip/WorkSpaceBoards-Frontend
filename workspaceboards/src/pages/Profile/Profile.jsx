@@ -127,8 +127,12 @@ const Profile = () => {
         throw err;
       }
     } catch (err) {
-      setErr(true)
-      
+      console.log(err)
+      if (err.response.status == 500) {
+        setErrMsg("Please Retry")
+        setErrHeading("Network Error")
+        setErr(true)
+      }
     }
   };
 
