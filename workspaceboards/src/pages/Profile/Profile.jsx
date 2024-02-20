@@ -158,7 +158,7 @@ const Profile = () => {
   };
   return (
     <div className="profile-container">
-      {err ? (<OverlayPopup />) : (
+      {err ? (<OverlayPopup heading={errHeading} msg={errMsg}/>) : (
         <div className="profileCard">
         <div className="left-section">
           <Hellboy />
