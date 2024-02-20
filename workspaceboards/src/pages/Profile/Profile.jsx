@@ -68,78 +68,67 @@ const Profile = () => {
     try {
       let response;
       if (edit == "Username") {
-        try {
-          response = await axios.put(
-            `${serverURL}/api/user/updateUsername`,
-            {
-              username: toChange,
+        response = await axios.put(
+          `${serverURL}/api/user/updateUsername`,
+          {
+            username: toChange,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${currentUser.token}`,
             },
-            {
-              headers: {
-                Authorization: `Bearer ${currentUser.token}`,
-              },
-            }
-          );
+          }
+        );
 
-          currentUser.user.username = toChange;
-          setEditProfile(false);
-          setEdit("");
-          navigate(`/profile/${currentUser.user._id}`)
-        } catch (err) {
-          console.log(err)
-        }
+        currentUser.user.username = toChange;
+        setEditProfile(false);
+        setEdit("");
       } else if (edit == "First Name") {
-        try {
-          
-          response = await axios.put(
-            `${serverURL}/api/user/updateFirstname`,
-            {
-              firstName: toChange,
+        response = await axios.put(
+          `${serverURL}/api/user/updateFirstname`,
+          {
+            firstName: toChange,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${currentUser.token}`,
             },
-            {
-              headers: {
-                Authorization: `Bearer ${currentUser.token}`,
-              },
-            }
-          );
-  
-          currentUser.user.firstName = toChange;
-          setEditProfile(false);
-          setEdit("");
-          navigate(`/profile/${currentUser.user._id}`)
-        } catch (err) {
-          console.log(err);
-        }
+          }
+        );
+
+        currentUser.user.firstName = toChange;
+        setEditProfile(false);
+        setEdit("");
       } else if (edit == "Last Name") {
-        try {
-          
-          response = await axios.put(
-            `${serverURL}/api/user/updateLastname`,
-            {
-              lastName: toChange,
+        response = await axios.put(
+          `${serverURL}/api/user/updateLastname`,
+          {
+            lastName: toChange,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${currentUser.token}`,
             },
-            {
-              headers: {
-                Authorization: `Bearer ${currentUser.token}`,
-              },
-            }
-          );
-  
-          currentUser.user.lastName = toChange;
-          setEditProfile(false);
-          setEdit("");
-          navigate(`/profile/${currentUser.user._id}`)
-        } catch (err) {
-          console.log(err)
-        }
+          }
+        );
+
+        currentUser.user.lastName = toChange;
+        setEditProfile(false);
+        setEdit("");
       } else {
         return;
       }
 
-      localStorage.setItem("workspace-user", JSON.stringify(currentUser));
-      window.location.reload();
+      if (response.status == 200) {
+        
+        localStorage.setItem("workspace-user", JSON.stringify(currentUser));
+        window.location.reload();
+      } else {
+        throw err;
+      }
     } catch (err) {
       setErr(true)
+      if(err.status)
     }
   };
 
