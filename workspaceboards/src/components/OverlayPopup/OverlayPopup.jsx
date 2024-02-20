@@ -2,11 +2,11 @@ import React from 'react'
 import "./overlaypopup.css"
 import { Link, useNavigate } from "react-router-dom";
 
-const OverlayPopup = ({ heading, msg }) => {
+const OverlayPopup = ({ heading, msg, redirection }) => {
   const navigate = useNavigate();
   
   const handleRetry = () => {
-    navigate("/")
+    window.location.reload();
   }
   return (
       <div className='popup-container'>
