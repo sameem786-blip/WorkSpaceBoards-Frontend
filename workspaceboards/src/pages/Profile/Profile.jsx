@@ -128,7 +128,7 @@ const Profile = () => {
       }
     } catch (err) {
       setErr(true)
-      if(err.status)
+      
     }
   };
 
