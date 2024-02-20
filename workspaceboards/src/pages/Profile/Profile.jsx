@@ -20,6 +20,7 @@ const Profile = () => {
   const [err, setErr] = useState(false);
   const [errMsg, setErrMsg] = useState("");
   const [errHeading, setErrHeading] = useState("");
+  const [errRedirection, setErrRedirection] = useState("");
   const [passwordResetState, setPasswordResetState] = useState(false);
   const [editProfile, setEditProfile] = useState(false);
   const [edit, setEdit] = useState("");
@@ -158,7 +159,7 @@ const Profile = () => {
   };
   return (
     <div className="profile-container">
-      {err ? (<OverlayPopup heading={errHeading} msg={errMsg}/>) : (
+      {err ? (<OverlayPopup heading={errHeading} msg={errMsg} redirection={ errRedirection} />) : (
         <div className="profileCard">
         <div className="left-section">
           <Hellboy />
