@@ -7,6 +7,7 @@ const AddTowerBtn = () => {
       <div className='addtowerbtn-container'>
       <div className="addtower-opaque">
         <img src={builder} alt='builder' className='builder-icon'></img>
+        <p className='add-tower-text'>Add Tower</p>
           </div>
     </div>
   )
