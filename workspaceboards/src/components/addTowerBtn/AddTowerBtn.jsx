@@ -3,7 +3,9 @@ import React from 'react'
 const AddTowerBtn = () => {
   return (
       <div className='addtowerbtn-container'>
-          AddTowerBtn
+      <div className="addtower-opaque">
+        
+          </div>
     </div>
   )
 }

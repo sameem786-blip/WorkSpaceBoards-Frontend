@@ -1,0 +1,10 @@
+.addtowerbtn-container{
+    border: 2px solid red;
+    width: 20%;
+        height: 80%;
+}
+.addtower-opaque{
+    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+}
