@@ -1,14 +1,15 @@
 .addtowerbtn-container{
-    border: 2px solid red;
     width: 20%;
         height: 80%;
         padding: 20px;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
 }
 .addtower-opaque{
-    border: 2px solid black;
     height: 50%;
     width: 80%;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid ;
 }
