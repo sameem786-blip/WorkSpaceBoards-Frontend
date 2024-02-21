@@ -8,6 +8,7 @@ const Dashboard = () => {
   return (
     <div className="Dashboard-Container">
       <Tower />
+      <Tower />
       <AddTowerBtn />
     </div>
   );
