@@ -1,7 +1,6 @@
 .tower-container{
     width: 20%;
     height: 100%;
-    border: 2px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,7 +24,8 @@
 }
 
 .tower-center{
-    border: 2px solid red;
+
     width: 50%;
     height: 100%;
+    overflow: auto;
 }
