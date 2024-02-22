@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .tower-top{
@@ -17,9 +17,15 @@
         padding: 0;
 }
 
-.tower-top{
+.top-img{
     width: 90%;
 }
-.tower-bottom{
+.bottom-img{
     width: 90%;
+}
+
+.tower-center{
+    border: 2px solid red;
+    width: 50%;
+    height: 100%;
 }
