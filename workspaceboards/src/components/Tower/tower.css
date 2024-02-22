@@ -2,6 +2,9 @@
     width: 20%;
     height: 80%;
     border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .tower-top{
@@ -9,4 +12,11 @@
 }
 .tower-bottom{
     border: 2px solid green;
+}
+
+.tower-top{
+    width: 90%;
+}
+.tower-bottom{
+    width: 90%;
 }
