@@ -5,6 +5,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 .tower-top{
@@ -18,9 +20,13 @@
 
 .top-img{
     width: 90%;
+    margin: 0;
+        padding: 0;
 }
 .bottom-img{
     width: 90%;
+    margin: 0;
+        padding: 0;
 }
 
 .tower-center{
@@ -28,4 +34,6 @@
     width: 50%;
     height: 100%;
     overflow: auto;
+    margin: 0;
+        padding: 0;
 }
