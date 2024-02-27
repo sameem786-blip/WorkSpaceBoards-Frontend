@@ -3,6 +3,7 @@ import "./card.css";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import CommentIcon from '@mui/icons-material/Comment';
 import CrisisAlertIcon from '@mui/icons-material/CrisisAlert';
+import LaunchIcon from '@mui/icons-material/Launch';
 
 const Card = () => {
   return (
@@ -11,7 +12,7 @@ const Card = () => {
           <div className="card-icons-container">
               <VisibilityIcon className='class-icon'/>3
               <CommentIcon className='class-icon'/>3
-              <CrisisAlertIcon className='class-icon important'/>
+              <LaunchIcon className='class-icon important'/>
           </div>
     </div>
   )

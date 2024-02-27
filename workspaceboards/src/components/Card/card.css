@@ -9,6 +9,7 @@
     background-size: cover;
         margin: 0;
         padding: 5px;
+        
 }
 
 .car-title{
@@ -36,4 +37,5 @@ font-family: "Pixelify Sans", sans-serif;
 
 .important{
     color: red;
+    cursor: pointer;
 }
