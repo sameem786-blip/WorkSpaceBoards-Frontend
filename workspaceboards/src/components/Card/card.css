@@ -1,0 +1,23 @@
+.card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../public/towwer/center.png");
+    height: auto;
+    background-position: center;
+    background-size: cover;
+        margin: 0;
+        padding: 0;
+}
+
+.car-title{
+font-family: "Pixelify Sans", sans-serif;
+    font-weight: 500;
+    font-size: 3vh;
+    color: black;
+}
+
+.card-icons{
+    color: #a8d8d8;
+}
