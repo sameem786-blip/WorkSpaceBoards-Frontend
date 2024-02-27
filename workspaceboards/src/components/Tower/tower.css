@@ -37,3 +37,15 @@
     margin: 0;
         padding: 0;
 }
+
+.tower-center::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.tower-center {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
