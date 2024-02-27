@@ -2,6 +2,7 @@ import React from 'react'
 import "./tower.css"
 import towerTop from "../../public/towwer/top.png"
 import towerBottom from "../../public/towwer/bottom.png"
+import Card from '../Card/Card'
 
 const Tower = () => {
   return (
@@ -9,7 +10,7 @@ const Tower = () => {
       <div className="tower-top">
         <img src={towerTop} alt='top' className='top-img'/>
           </div>
-          <div className="tower-center"></div>
+          <div className="tower-center"><Card /></div>
       <div className="tower-bottom">
         <img src={towerBottom } alt='top' className='bottom-img'/>
           </div>
