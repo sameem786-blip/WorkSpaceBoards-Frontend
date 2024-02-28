@@ -9,6 +9,10 @@ const AddTowerBtn = () => {
         <img src={builder} alt='builder' className='builder-icon'></img>
         <p className='add-tower-text'>Add Tower</p>
           </div>
+      <div className="addtower-opaque">
+        <img src={builder} alt='builder' className='builder-icon'></img>
+        <p className='add-tower-text'>Add Card</p>
+          </div>
     </div>
   )
 }

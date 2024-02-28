@@ -4,7 +4,9 @@
         padding: 20px;
         display: flex;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
 }
 .addtower-opaque{
     height: 50%;
