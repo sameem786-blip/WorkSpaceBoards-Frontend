@@ -48,3 +48,12 @@ filter: drop-shadow(0px 0px 18px #000000);
         color: #a8d8d8;
         filter: drop-shadow(0px 0px 18px #000000);
 }
+
+.addtower-opaque .builder-icon {
+    transition: transform 0.5s ease;
+}
+
+.addtower-opaque:hover .builder-icon {
+    transform: scale(1.8);
+    /* Adjust the scaling factor as needed */
+}
