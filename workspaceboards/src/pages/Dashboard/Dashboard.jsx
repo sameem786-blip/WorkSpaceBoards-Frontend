@@ -63,7 +63,10 @@ const Dashboard = () => {
   ]
   return (
     <div className="Dashboard-Container">
-      <Tower />
+      {towers.map((item,index) => {
+        <Tower tower={item} />
+      })}
+      
       <Tower />
       <AddTowerBtn />
     </div>
