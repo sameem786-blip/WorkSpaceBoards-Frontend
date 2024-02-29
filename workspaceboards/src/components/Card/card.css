@@ -17,7 +17,7 @@
 }
 
 .card-container:hover{
-    cursor: pointer;
+    cursor: grab;
     scale: 1.1;
     position: absolute;
     width: 10%;
