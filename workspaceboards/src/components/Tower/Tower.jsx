@@ -13,10 +13,6 @@ const Tower = ({tower}) => {
           </div>
       <div className="tower-center">
         <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
       </div>
       <div className="tower-bottom">
         <img src={towerBottom } alt='top' className='bottom-img'/>
