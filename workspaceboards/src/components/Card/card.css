@@ -18,10 +18,10 @@
 
 .card-container:hover{
     cursor: grab;
-    scale: 1.1;
-    position: absolute;
-    width: 10%;
-    border-radius: 10%;
+        transform: scale(1.1);
+        border-radius: 10px;
+        z-index: 9999999;
+        height: auto;
 
 }
 .card-container:hover .card-icons-container{
