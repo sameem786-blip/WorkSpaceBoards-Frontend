@@ -5,7 +5,7 @@ import towerBottom from "../../public/towwer/bottom.png"
 import Card from '../Card/Card'
 
 
-const Tower = () => {
+const Tower = ({tower}) => {
   return (
       <div className='tower-container'>
       <div className="tower-top">
