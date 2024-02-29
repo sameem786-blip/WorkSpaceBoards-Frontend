@@ -4,6 +4,7 @@ import towerTop from "../../public/towwer/top.png"
 import towerBottom from "../../public/towwer/bottom.png"
 import Card from '../Card/Card'
 
+
 const Tower = () => {
   return (
       <div className='tower-container'>
