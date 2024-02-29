@@ -14,7 +14,7 @@ const Tower = ({ tower }) => {
           </div>
       <div className="tower-center">
         {cards.map((item,index) => (
-          <Card cards={cards} key={ index} />
+          <Card card={item} key={ index} />
       ))}
       </div>
       <div className="tower-bottom">
