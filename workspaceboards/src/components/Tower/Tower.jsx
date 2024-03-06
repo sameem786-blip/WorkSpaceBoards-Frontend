@@ -16,6 +16,8 @@ import { arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 
 const Tower = ({ tower }) => {
 
+  const cards = tower.cards;
+
   const sensors = useSensors(
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
@@ -23,20 +25,20 @@ const Tower = ({ tower }) => {
     })
   );
 
-  const getTaskPos = (id) => tasks.findIndex((task) => task.id === id);
+  const getCardPos = (id) => cards.findIndex((card) => card.id === id);
 
   const handleDragEnd = (event) => {
     const { active, over } = event;
 
     if (active.id === over.id) return;
 
-    setTasks((tasks) => {
-      const originalPos = getTaskPos(active.id);
-      const newPos = getTaskPos(over.id);
+    const setCards = ((cards) => {
+      const originalPos = getCardPos(active.id);
+      const newPos = getCardPos(over.id);
 
-      return arrayMove(tasks, originalPos, newPos);
+      return arrayMove(cards, originalPos, newPos);
     });
-    const cards = tower.cards;
+    
     return (
       <div className='tower-container'>
         <div className="tower-top">
