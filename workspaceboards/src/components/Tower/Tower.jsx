@@ -3,6 +3,15 @@ import "./tower.css"
 import towerTop from "../../public/towwer/top.png"
 import towerBottom from "../../public/towwer/bottom.png"
 import Card from '../Card/Card'
+import {
+  DndContext,
+  KeyboardSensor,
+  PointerSensor,
+  useSensor,
+  useSensors,
+  closestCorners,
+} from "@dnd-kit/core";
+import { arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 
 
 const Tower = ({ tower }) => {
