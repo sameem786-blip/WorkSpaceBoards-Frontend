@@ -7,7 +7,7 @@ import LaunchIcon from '@mui/icons-material/Launch';
 
 const Card = ({card}) => {
   return (
-      <div className='card-container'>
+      <div className='card-containe'>
           <div className="car-title">{card.title}</div>
           <div className="card-icons-container">
               <VisibilityIcon className='class-icon'/>3
