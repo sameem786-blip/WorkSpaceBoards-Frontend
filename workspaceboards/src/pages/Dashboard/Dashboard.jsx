@@ -70,39 +70,12 @@ const [towers,setTower] = useState([
     },
   ])
 
-  const sensors = useSensors(
-    useSensor(PointerSensor),
-    useSensor(KeyboardSensor, {
-      coordinateGetter: sortableKeyboardCoordinates,
-    })
-  );
-
-  const getCardPos = (id) => towers.findIndex((tower) => tower.id === id);
-
-  const handleDragEnd = (event) => {
-    const { active, over } = event;
-
-    if (active.id === over.id) return;
-
-    setTower((cards) => {
-      const originalPos = getCardPos(active.id);
-      const newPos = getCardPos(over.id);
-
-      return arrayMove(cards, originalPos, newPos);
-    });
-  };
-
   return (
     <div className="Dashboard-Container">
-      <DndContext
-        sensors={sensors}
-        collisionDetection={closestCorners}
-        onDragEnd={handleDragEnd}
-      >
+      
         {towers.map((item,index) => (
         <Tower tower={item} key={index}/>
       ))}
-      </DndContext>
       <AddTowerBtn />
     </div>
   );

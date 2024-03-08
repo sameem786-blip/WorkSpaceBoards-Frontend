@@ -13,7 +13,9 @@ const Tower = ({ tower }) => {
   const cards = tower.cards;
   return (
       <div className='tower-container'>
-      
+      <div className="tower-title">
+        <h4>{tower.name}</h4>
+      </div>
     </div>
   )
 }
