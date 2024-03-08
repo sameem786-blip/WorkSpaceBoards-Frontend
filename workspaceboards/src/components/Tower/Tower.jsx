@@ -15,8 +15,8 @@ const Tower = ({ tower }) => {
       <div className='tower-container'>
       <div className="tower-title">
         {tower.name.split('').map((char, index) => (
-    <span key={index}>{char}</span>
-  ))}
+    <span className="tower-title-span" key={index}>{char}</span>
+        ))}
       </div>
       <div className='tower-cards'>
       {cards.map((card, index) => {
