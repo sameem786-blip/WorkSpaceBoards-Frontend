@@ -14,7 +14,11 @@ const Tower = ({ tower }) => {
   return (
       <div className='tower-container'>
       <div className="tower-title">
-        <h4>{tower.name.map}</h4>
+        <h1>
+        {tower.name.split('').map((char, index) => (
+    <span key={index}>{char}</span>
+        ))}
+          </h1>
       </div>
       <div className='tower-cards'>
       {cards.map((card, index) => {
