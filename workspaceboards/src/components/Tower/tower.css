@@ -4,11 +4,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 0;
-    padding: 5;
+    padding: 5px;
     border: 5px solid #381a04;
     border-radius: 0px;
     backdrop-filter: blur(10px);
+    cursor:grab;
 }
 
+.tower-title{
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red) 1;
+    border-image-slice: 1;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99%;
+    background-color: #a85f2b;
+
+}
+h4{
+    font-size: 2vw;
+    font-family: "Pixelify Sans", sans-serif;
+    color: #a8d8d8;
+}

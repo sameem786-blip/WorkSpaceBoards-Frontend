@@ -14,7 +14,7 @@ const Tower = ({ tower }) => {
   return (
       <div className='tower-container'>
       <div className="tower-title">
-        <h4>{tower.name}</h4>
+        <h4>{tower.name.map}</h4>
       </div>
       <div className='tower-cards'>
       {cards.map((card, index) => {
