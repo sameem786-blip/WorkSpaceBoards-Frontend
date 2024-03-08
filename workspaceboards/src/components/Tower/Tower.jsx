@@ -16,6 +16,11 @@ const Tower = ({ tower }) => {
       <div className="tower-title">
         <h4>{tower.name}</h4>
       </div>
+      <div className='tower-cards'>
+      {cards.map((card, index) => {
+        <Card card={card} key={index} />
+      })}
+        </div>
     </div>
   )
 }

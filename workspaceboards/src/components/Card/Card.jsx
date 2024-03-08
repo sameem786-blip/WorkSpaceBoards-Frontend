@@ -9,15 +9,8 @@ import { CSS } from "@dnd-kit/utilities";
 
 const Card = ({card}) => {
   return (
-      <div className='card-container'
-    
-    >
-          <div className="car-title">{card.title}</div>
-          <div className="card-icons-container">
-              <VisibilityIcon className='class-icon'/>3
-              <CommentIcon className='class-icon'/>3
-              <LaunchIcon className='class-icon important'/>
-          </div>
+    <div className='card-container'>
+      Hello
     </div>
   )
 }
