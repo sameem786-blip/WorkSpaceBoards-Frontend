@@ -8,19 +8,9 @@ import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 
 const Card = ({card}) => {
-
-  const { attributes, listeners, setNodeRef, transform, transition } =
-    useSortable({ card });
-
-  const style = {
-    transition,
-    transform: CSS.Transform.toString(transform),
-  };
   return (
-      <div className='card-container'ref={setNodeRef}
-      style={style}
-      {...attributes}
-      {...listeners}
+      <div className='card-container'
+    
     >
           <div className="car-title">{card.title}</div>
           <div className="card-icons-container">

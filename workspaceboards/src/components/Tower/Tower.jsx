@@ -12,7 +12,7 @@ import {
 const Tower = ({ tower }) => {
   const cards = tower.cards;
   return (
-      <div>
+      <div className='tower-container'>
       
     </div>
   )

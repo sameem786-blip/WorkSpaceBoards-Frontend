@@ -6,46 +6,10 @@
     align-items: center;
     justify-content: center;
     margin: 0;
-    padding: 0;
+    padding: 5;
+    border: 5px solid #381a04;
+    border-radius: 0px;
+    background-color: #a85f2b;
+    backdrop-filter: blur(10px);
 }
 
-.tower-top{
-    margin: 0;
-    padding: 0;
-}
-.tower-bottom{
-    margin: 0;
-        padding: 0;
-}
-
-.top-img{
-    width: 90%;
-    margin: 0;
-        padding: 0;
-}
-.bottom-img{
-    width: 90%;
-    margin: 0;
-        padding: 0;
-}
-
-.tower-center{
-
-    width: 50%;
-    height: 100%;
-    overflow: auto;
-    margin: 0;
-        padding: 0;
-}
-
-.tower-center::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.tower-center {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
