@@ -12,21 +12,8 @@ import {
 const Tower = ({ tower }) => {
   const cards = tower.cards;
   return (
-      <div className='tower-container'>
-      <div className="tower-top">
-        <img src={towerTop} alt='top' className='top-img'/>
-          </div>
-      <div className="tower-center">
-        <SortableContext items={cards} strategy={verticalListSortingStrategy}>
-        {cards.map((item,index) => (
-          <Card card={item} key={ index} />
-      ))}
-      </SortableContext>
-        
-      </div>
-      <div className="tower-bottom">
-        <img src={towerBottom } alt='top' className='bottom-img'/>
-          </div>
+      <div>
+      
     </div>
   )
 }
