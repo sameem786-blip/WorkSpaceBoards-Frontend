@@ -13,10 +13,10 @@ const Card = ({card}) => {
       {card.title}
       <div className="card-icons">
         <p>{card.createdBy}</p>
-        <>
+        <div className='whatever'>
           <CommentIcon className="card-icon"/>
           <p>3</p>
-        </>
+        </div>
         
       </div>
     </div>

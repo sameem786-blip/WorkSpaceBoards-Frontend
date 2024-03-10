@@ -28,6 +28,14 @@
         font-size: 1vw;
 }
 
+.whatever{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
 .card-icon {
     padding: 0;
     margin: 0;
