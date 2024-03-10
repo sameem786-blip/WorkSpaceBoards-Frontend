@@ -20,10 +20,10 @@ const Tower = ({ tower }) => {
       </div>
       
       <div className='tower-cards'>
-        {cards.map((card, index) => {
-          <Card card={card} key={index} />
-        })}
-      </div>
+  {cards.map((card, index) => (
+    <Card card={card} key={index} />
+  ))}
+</div>
     </div>
   )
 }

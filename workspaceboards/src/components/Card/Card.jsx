@@ -10,7 +10,7 @@ import { CSS } from "@dnd-kit/utilities";
 const Card = ({card}) => {
   return (
     <div className='card-container'>
-      Hello
+      {card.title}
     </div>
   )
 }
