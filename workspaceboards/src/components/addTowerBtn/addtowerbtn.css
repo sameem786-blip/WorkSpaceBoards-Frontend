@@ -44,7 +44,7 @@ filter: drop-shadow(0px 0px 18px #000000);
 .add-tower-text{
     font-family: "Pixelify Sans", sans-serif;
         font-weight: 500;
-        font-size: 3vh;
+        font-size: 2vw;
         color: #a8d8d8;
         filter: drop-shadow(0px 0px 18px #000000);
 }
@@ -54,6 +54,6 @@ filter: drop-shadow(0px 0px 18px #000000);
 }
 
 .addtower-opaque:hover .builder-icon {
-    transform: scale(1.8);
+    transform: scale(1.4);
     /* Adjust the scaling factor as needed */
 }
