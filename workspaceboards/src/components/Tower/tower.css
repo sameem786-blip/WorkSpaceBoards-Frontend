@@ -33,3 +33,9 @@
     text-shadow: 0px 5px 7px #000000;
     
 }
+
+.tower-cards{
+    border: 2px solid black;
+    width: 97%;
+    height: 100%;
+}
