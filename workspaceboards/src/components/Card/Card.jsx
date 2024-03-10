@@ -11,6 +11,14 @@ const Card = ({card}) => {
   return (
     <div className='card-container'>
       {card.title}
+      <div className="card-icons">
+        <p>{card.createdBy}</p>
+        <>
+          <CommentIcon className="card-icon"/>
+          <p>3</p>
+        </>
+        
+      </div>
     </div>
   )
 }
