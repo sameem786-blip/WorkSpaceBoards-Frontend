@@ -43,4 +43,5 @@
     align-items: center;
     justify-content: flex-start;
     gap: 15px;
+    overflow-y: auto;
 }
