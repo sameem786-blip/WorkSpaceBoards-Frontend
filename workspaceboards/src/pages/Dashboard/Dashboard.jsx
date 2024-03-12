@@ -73,9 +73,9 @@ const [towers,setTower] = useState([
       "position": "2",
       "cards": [
         {
-          "id": "4",
+          "id": "1",
           "position": "1",
-          "title": "Test Title 2",
+          "title": "Test Title 1",
           "createdBy": "Test User 1"
           
         },
@@ -88,6 +88,27 @@ const [towers,setTower] = useState([
         },
         {
           "id": "3",
+          "position": "1",
+          "title": "Test Title 1",
+          "createdBy": "Test User 1"
+
+        },
+        {
+          "id": "4",
+          "position": "1",
+          "title": "Test Title 1",
+          "createdBy": "Test User 1"
+          
+        },
+        {
+          "id": "5",
+          "position": "1",
+          "title": "Test Title 1",
+          "createdBy": "Test User 1"
+
+        },
+        {
+          "id": "6",
           "position": "1",
           "title": "Test Title 1",
           "createdBy": "Test User 1"
