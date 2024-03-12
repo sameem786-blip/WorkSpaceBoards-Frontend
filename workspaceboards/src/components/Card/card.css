@@ -11,7 +11,7 @@
     font-weight: 800;
     font-size: 2vw;
     text-shadow: 0px 5px 7px #000000;
-    background: #764521;
+    backdrop-filter: blur(10px);
         border: 1px solid transparent;
         border-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red) 1;
         border-image-slice: 1;

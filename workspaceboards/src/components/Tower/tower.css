@@ -9,7 +9,6 @@
     padding: 5px;
     border: 5px solid #381a04;
     border-radius: 0px;
-    backdrop-filter: blur(10px);
     cursor:grab;
     gap: 10px;
 }
