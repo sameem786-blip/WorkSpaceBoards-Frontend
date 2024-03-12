@@ -47,3 +47,10 @@
     overflow-y: scroll;
 }
 
+.tower-cards::-webkit-scrollbar {
+    display: none;
+}
+.tower-cards {
+    scrollbar-width: none;
+}
+
