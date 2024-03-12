@@ -5,7 +5,7 @@ import CommentIcon from '@mui/icons-material/Comment';
 import CrisisAlertIcon from '@mui/icons-material/CrisisAlert';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { useSortable } from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities";
+import { CSS } from "@dnd-kit/utilities"
 
 const Card = ({ id, title, comments, createdBy }) => {
   const { attributes, listeners, setNodeRef, transform, transition } =
@@ -21,9 +21,9 @@ const Card = ({ id, title, comments, createdBy }) => {
       style={style}
       {...attributes}
       {...listeners}>
-      {card.title}
+      {title}
       <div className="card-icons">
-        <p>{card.createdBy}</p>
+        <p>{createdBy}</p>
         <div className='whatever'>
           <CommentIcon className="card-icon"/>
           <p>3</p>
