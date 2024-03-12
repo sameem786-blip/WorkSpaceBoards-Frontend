@@ -5,8 +5,7 @@ import CommentIcon from '@mui/icons-material/Comment';
 import CrisisAlertIcon from '@mui/icons-material/CrisisAlert';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { useSortable } from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities"j
-
+import { CSS } from "@dnd-kit/utilities"jfdvbkjbk
 const Card = ({ id, title, comments, createdBy }) => {
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id });
