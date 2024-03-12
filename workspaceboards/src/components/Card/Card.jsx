@@ -7,9 +7,20 @@ import LaunchIcon from '@mui/icons-material/Launch';
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 
-const Card = ({card}) => {
+const Card = ({ id, title, comments }) => {
+  const { attributes, listeners, setNodeRef, transform, transition } =
+    useSortable({ id });
+
+  const style = {
+    transition,
+    transform: CSS.Transform.toString(transform),
+  };
+
   return (
-    <div className='card-container'>
+    <div className='card-container' ref={setNodeRef}
+      style={style}
+      {...attributes}
+      {...listeners}>
       {card.title}
       <div className="card-icons">
         <p>{card.createdBy}</p>
