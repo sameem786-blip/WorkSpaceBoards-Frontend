@@ -15,6 +15,16 @@ const Dashboard = () => {
         { id: "2", position: "2", title: "Test Title 2", createdBy: "Test User 2" },
       ],
     },
+    {
+      id: "2",
+      name: "Tower 2",
+      createdById: "1",
+      position: "2",
+      cards: [
+        { id: "3", position: "1", title: "Test Title 1", createdBy: "Test User 1" },
+        { id: "4", position: "2", title: "Test Title 2", createdBy: "Test User 2" },
+      ],
+    },
     // Add more towers as needed
   ]);
 
