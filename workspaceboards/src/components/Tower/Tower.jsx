@@ -20,9 +20,12 @@ const Tower = ({ tower }) => {
       </div>
       
       <div className='tower-cards'>
-  {cards.map((card, index) => (
+        <SortableContext items={cards} strategy={verticalListSortingStrategy}>
+        {cards.map((card, index) => (
     <Card card={card} key={index} />
   ))}
+      </SortableContext>
+  
 </div>
     </div>
   )
