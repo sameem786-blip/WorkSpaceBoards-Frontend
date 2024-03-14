@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./tower.css"
 import towerTop from "../../public/towwer/top.png"
 import towerBottom from "../../public/towwer/bottom.png"
@@ -10,7 +10,15 @@ import {
 
 
 const Tower = ({ tower }) => {
-  const cards = tower.cards;
+  const [cards, setCards] = useState([tower.cards]);
+
+  const sensors = useSensors(
+    useSensor(PointerSensor),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
+    })
+  );
+
   return (
       <div className='tower-container'>
       <div className="tower-title">
