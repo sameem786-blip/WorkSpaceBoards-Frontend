@@ -1,131 +1,65 @@
-import React, {useState} from "react";
-import "./dashboard.css";
-import Navbar from "../../components/Navbar/Navbar";
-import Tower from "../../components/Tower/Tower";
-import AddTowerBtn from "../../components/addTowerBtn/AddTowerBtn";
-import {
-  DndContext,
-  KeyboardSensor,
-  PointerSensor,
-  useSensor,
-  useSensors,
-  closestCorners,
-} from "@dnd-kit/core";
+import React, { useState } from "react";
+import { DndContext, KeyboardSensor, PointerSensor, useSensor, useSensors } from "@dnd-kit/core";
 import { arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
-
+import Tower from "../../components/Tower/Tower";
 
 const Dashboard = () => {
-const [towers,setTower] = useState([
+  const [towers, setTowers] = useState([
     {
-      "id": "1",
-      "name": "Tower 1",
-      "createdById": "1",
-      "position": "1",
-      "cards": [
-        {
-          "id": "1",
-          "position": "1",
-          "title": "Test Title 1",
-          "createdBy": "Test User 1"
-          
-        },
-        {
-          "id": "2",
-          "position": "1",
-          "title": "Test Title 1",
-          "createdBy": "Test User 1"
-
-        },
-        {
-          "id": "3",
-          "position": "1",
-          "title": "Test Title 1",
-          "createdBy": "Test User 1"
-
-        },
-        {
-          "id": "4",
-          "position": "1",
-          "title": "Test Title 1",
-          "createdBy": "Test User 1"
-          
-        },
-        {
-          "id": "5",
-          "position": "1",
-          "title": "Test Title 1",
-          "createdBy": "Test User 1"
-
-        },
-        {
-          "id": "6",
-          "position": "1",
-          "title": "Test Title 1",
-          "createdBy": "Test User 1"
-
-        }
+      id: "1",
+      name: "Tower 1",
+      createdById: "1",
+      position: "1",
+      cards: [
+        { id: "1", position: "1", title: "Test Title 1", createdBy: "Test User 1" },
+        { id: "2", position: "2", title: "Test Title 2", createdBy: "Test User 2" },
       ],
     },
-    {
-      "id": "2",
-      "name": "Tower 3",
-      "createdById": "1",
-      "position": "2",
-      "cards": [
-        {
-          "id": "1",
-          "position": "1",
-          "title": "Test Title 1",
-          "createdBy": "Test User 1"
-          
-        },
-        {
-          "id": "2",
-          "position": "1",
-          "title": "Test Title 1",
-          "createdBy": "Test User 1"
+    // Add more towers as needed
+  ]);
 
-        },
-        {
-          "id": "3",
-          "position": "1",
-          "title": "Test Title 1",
-          "createdBy": "Test User 1"
+  const sensors = useSensors(
+    useSensor(PointerSensor),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
+    })
+  );
 
-        },
-        {
-          "id": "4",
-          "position": "1",
-          "title": "Test Title 1",
-          "createdBy": "Test User 1"
-          
-        },
-        {
-          "id": "5",
-          "position": "1",
-          "title": "Test Title 1",
-          "createdBy": "Test User 1"
+  const handleDragEnd = (event) => {
+    const { active, over } = event;
 
-        },
-        {
-          "id": "6",
-          "position": "1",
-          "title": "Test Title 1",
-          "createdBy": "Test User 1"
+    if (active.id === over.id) return;
 
-        }
-      ],
-    },
-  ])
+    setTowers((prevTowers) => {
+      const activeTowerIndex = prevTowers.findIndex((tower) => tower.id === active.id);
+      const overTowerIndex = prevTowers.findIndex((tower) => tower.id === over.id);
+
+      const updatedTowers = [...prevTowers];
+      const activeTower = updatedTowers[activeTowerIndex];
+      const overTower = updatedTowers[overTowerIndex];
+
+      const activeCardIndex = activeTower.cards.findIndex((card) => card.id === active.id);
+
+      const movedCard = activeTower.cards[activeCardIndex];
+
+      // Remove the card from the active tower
+      activeTower.cards.splice(activeCardIndex, 1);
+
+      // Insert the card into the over tower
+      overTower.cards.push(movedCard);
+
+      return updatedTowers;
+    });
+  };
 
   return (
-    <div className="Dashboard-Container">
-      
-        {towers.map((item,index) => (
-        <Tower tower={item} key={index}/>
-      ))}
-      <AddTowerBtn />
-    </div>
+    <DndContext sensors={sensors} onDragEnd={handleDragEnd}>
+      <div className="Dashboard-Container">
+        {towers.map((tower) => (
+          <Tower key={tower.id} tower={tower} />
+        ))}
+      </div>
+    </DndContext>
   );
 };
 
