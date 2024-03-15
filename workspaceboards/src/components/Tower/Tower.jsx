@@ -11,6 +11,7 @@ const DraggableCard = ({ card }) => {
   const style = {
     transform,
     transition,
+    width: '100%',
   };
 
   return (
