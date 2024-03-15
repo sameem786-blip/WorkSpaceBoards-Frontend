@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { DndContext, KeyboardSensor, PointerSensor, useSensor, useSensors } from "@dnd-kit/core";
 import { arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 import Tower from "../../components/Tower/Tower";
-import addTowerBtn from '../../components/addTowerBtn/AddTowerBtn'
+import AddTowerBtn from '../../components/addTowerBtn/AddTowerBtn'
 import './dashboard.css'
 
 const Dashboard = () => {
@@ -82,7 +82,7 @@ const Dashboard = () => {
         {towers.map((tower) => (
           <Tower key={tower.id} tower={tower} />
         ))}
-      <addTowerBtn />
+      <AddTowerBtn />
       </div>
     </DndContext>
   );
