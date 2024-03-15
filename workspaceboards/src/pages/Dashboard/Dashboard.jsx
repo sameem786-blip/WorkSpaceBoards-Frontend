@@ -48,13 +48,18 @@ const Dashboard = () => {
 
   if (active.id === over.id) return;
 
-  setTowers((prevTowers) => {
+    setTowers((prevTowers) => {
+      debugger;
     const sourceTowerIndex = prevTowers.findIndex((tower) => tower.id === active.id);
-    const destinationTowerIndex = prevTowers.findIndex((tower) => tower.id === over.id);
-
-    const updatedTowers = [...prevTowers];
-    const sourceTower = { ...updatedTowers[sourceTowerIndex] };
-    const destinationTower = { ...updatedTowers[destinationTowerIndex] };
+      const destinationTowerIndex = prevTowers.findIndex((tower) => tower.id === over.id);
+      
+      
+      const updatedTowers = [...prevTowers];
+      const sourceTower = { ...updatedTowers[sourceTowerIndex] };
+      const destinationTower = { ...updatedTowers[destinationTowerIndex] };
+      console.log("Source Tower : ",sourceTower)
+      console.log("Updated Tower : ",updatedTowers)
+      console.log("Destination Tower : ",destinationTower)
 
     const activeCardIndex = sourceTower.cards.findIndex((card) => card.id === active.id);
     const movedCard = sourceTower.cards[activeCardIndex];
@@ -62,8 +67,8 @@ const Dashboard = () => {
     // Remove the card from the source tower
     sourceTower.cards.splice(activeCardIndex, 1);
 
-    // Update the towerId of the moved card
-    movedCard.towerId = destinationTower.id;
+      // Update the towerId of the moved card
+      movedCard.towerId = destinationTower.id;
 
     // Insert the card into the destination tower
     destinationTower.cards.push(movedCard);
