@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { DndContext, KeyboardSensor, PointerSensor, useSensor, useSensors } from "@dnd-kit/core";
 import { arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 import Tower from "../../components/Tower/Tower";
+import './dashboard.css'
 
 const Dashboard = () => {
   const [towers, setTowers] = useState([
@@ -13,6 +14,10 @@ const Dashboard = () => {
       cards: [
         { id: "1", position: "1", title: "Test Title 1", createdBy: "Test User 1" },
         { id: "2", position: "2", title: "Test Title 2", createdBy: "Test User 2" },
+        { id: "3", position: "3", title: "Test Title 2", createdBy: "Test User 2" },
+        { id: "4", position: "4", title: "Test Title 2", createdBy: "Test User 2" },
+        { id: "5", position: "5", title: "Test Title 2", createdBy: "Test User 2" },
+        { id: "6", position: "6", title: "Test Title 2", createdBy: "Test User 2" },
       ],
     },
     {
@@ -21,8 +26,10 @@ const Dashboard = () => {
       createdById: "1",
       position: "2",
       cards: [
-        { id: "3", position: "1", title: "Test Title 1", createdBy: "Test User 1" },
-        { id: "4", position: "2", title: "Test Title 2", createdBy: "Test User 2" },
+        { id: "5", position: "1", title: "Test Title 1", createdBy: "Test User 1" },
+        { id: "6", position: "2", title: "Test Title 2", createdBy: "Test User 2" },
+        { id: "7", position: "3", title: "Test Title 2", createdBy: "Test User 2" },
+        { id: "8", position: "4", title: "Test Title 2", createdBy: "Test User 2" },
       ],
     },
     // Add more towers as needed
@@ -36,31 +43,37 @@ const Dashboard = () => {
   );
 
   const handleDragEnd = (event) => {
-    const { active, over } = event;
+  const { active, over } = event;
 
-    if (active.id === over.id) return;
+  if (active.id === over.id) return;
 
-    setTowers((prevTowers) => {
-      const activeTowerIndex = prevTowers.findIndex((tower) => tower.id === active.id);
-      const overTowerIndex = prevTowers.findIndex((tower) => tower.id === over.id);
+  setTowers((prevTowers) => {
+    const sourceTowerIndex = prevTowers.findIndex((tower) => tower.id === active.id);
+    const destinationTowerIndex = prevTowers.findIndex((tower) => tower.id === over.id);
 
-      const updatedTowers = [...prevTowers];
-      const activeTower = updatedTowers[activeTowerIndex];
-      const overTower = updatedTowers[overTowerIndex];
+    const updatedTowers = [...prevTowers];
+    const sourceTower = { ...updatedTowers[sourceTowerIndex] };
+    const destinationTower = { ...updatedTowers[destinationTowerIndex] };
 
-      const activeCardIndex = activeTower.cards.findIndex((card) => card.id === active.id);
+    const activeCardIndex = sourceTower.cards.findIndex((card) => card.id === active.id);
+    const movedCard = sourceTower.cards[activeCardIndex];
 
-      const movedCard = activeTower.cards[activeCardIndex];
+    // Remove the card from the source tower
+    sourceTower.cards.splice(activeCardIndex, 1);
 
-      // Remove the card from the active tower
-      activeTower.cards.splice(activeCardIndex, 1);
+    // Update the towerId of the moved card
+    movedCard.towerId = destinationTower.id;
 
-      // Insert the card into the over tower
-      overTower.cards.push(movedCard);
+    // Insert the card into the destination tower
+    destinationTower.cards.push(movedCard);
 
-      return updatedTowers;
-    });
-  };
+    // Update the towers array with modified source and destination towers
+    updatedTowers[sourceTowerIndex] = sourceTower;
+    updatedTowers[destinationTowerIndex] = destinationTower;
+
+    return updatedTowers;
+  });
+};
 
   return (
     <DndContext sensors={sensors} onDragEnd={handleDragEnd}>
