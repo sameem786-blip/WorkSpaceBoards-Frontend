@@ -15,10 +15,10 @@ const Dashboard = () => {
       cards: [
         { id: "1", position: "1", title: "Test Title 1", createdBy: "Test User 1" },
         { id: "2", position: "2", title: "Test Title 2", createdBy: "Test User 2" },
-        { id: "3", position: "3", title: "Test Title 2", createdBy: "Test User 2" },
-        { id: "4", position: "4", title: "Test Title 2", createdBy: "Test User 2" },
-        { id: "5", position: "5", title: "Test Title 2", createdBy: "Test User 2" },
-        { id: "6", position: "6", title: "Test Title 2", createdBy: "Test User 2" },
+        { id: "3", position: "3", title: "Test Title 3", createdBy: "Test User 2" },
+        { id: "4", position: "4", title: "Test Title 4", createdBy: "Test User 2" },
+        { id: "5", position: "5", title: "Test Title 5", createdBy: "Test User 2" },
+        { id: "6", position: "6", title: "Test Title 6", createdBy: "Test User 2" },
       ],
     },
     {
@@ -29,8 +29,8 @@ const Dashboard = () => {
       cards: [
         { id: "7", position: "1", title: "Test Title 1", createdBy: "Test User 1" },
         { id: "8", position: "2", title: "Test Title 2", createdBy: "Test User 2" },
-        { id: "9", position: "3", title: "Test Title 2", createdBy: "Test User 2" },
-        { id: "10", position: "4", title: "Test Title 2", createdBy: "Test User 2" },
+        { id: "9", position: "3", title: "Test Title 3", createdBy: "Test User 2" },
+        { id: "10", position: "4", title: "Test Title 4", createdBy: "Test User 2" },
       ],
     },
     // Add more towers as needed
@@ -49,7 +49,6 @@ const Dashboard = () => {
   if (active.id === over.id) return;
 
     setTowers((prevTowers) => {
-      debugger;
     const sourceTowerIndex = prevTowers.findIndex((tower) => tower.id === active.id);
       const destinationTowerIndex = prevTowers.findIndex((tower) => tower.id === over.id);
       
@@ -62,7 +61,9 @@ const Dashboard = () => {
       console.log("Destination Tower : ",destinationTower)
 
     const activeCardIndex = sourceTower.cards.findIndex((card) => card.id === active.id);
-    const movedCard = sourceTower.cards[activeCardIndex];
+      const movedCard = sourceTower.cards[activeCardIndex];
+      console.log("activeCardIndex : ", activeCardIndex)
+      console.log("movedCard : ",movedCard)
 
     // Remove the card from the source tower
     sourceTower.cards.splice(activeCardIndex, 1);
