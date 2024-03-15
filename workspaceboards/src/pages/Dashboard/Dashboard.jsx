@@ -48,28 +48,22 @@ const Dashboard = () => {
 
   if (active.id === over.id) return;
 
-    setTowers((prevTowers) => {
+  setTowers((prevTowers) => {
     const sourceTowerIndex = prevTowers.findIndex((tower) => tower.id === active.id);
-      const destinationTowerIndex = prevTowers.findIndex((tower) => tower.id === over.id);
-      
-      
-      const updatedTowers = [...prevTowers];
-      const sourceTower = { ...updatedTowers[sourceTowerIndex] };
-      const destinationTower = { ...updatedTowers[destinationTowerIndex] };
-      console.log("Source Tower : ",sourceTower)
-      console.log("Updated Tower : ",updatedTowers)
-      console.log("Destination Tower : ",destinationTower)
+    const destinationTowerIndex = prevTowers.findIndex((tower) => tower.id === over.id);
+    
+    const updatedTowers = [...prevTowers];
+    const sourceTower = { ...updatedTowers[sourceTowerIndex] };
+    const destinationTower = { ...updatedTowers[destinationTowerIndex] };
 
     const activeCardIndex = sourceTower.cards.findIndex((card) => card.id === active.id);
-      const movedCard = sourceTower.cards[activeCardIndex];
-      console.log("activeCardIndex : ", activeCardIndex)
-      console.log("movedCard : ",movedCard)
+    const movedCard = sourceTower.cards[activeCardIndex];
 
     // Remove the card from the source tower
     sourceTower.cards.splice(activeCardIndex, 1);
 
-      // Update the towerId of the moved card
-      movedCard.towerId = destinationTower.id;
+    // Update the towerId of the moved card
+    movedCard.towerId = destinationTower.id;
 
     // Insert the card into the destination tower
     destinationTower.cards.push(movedCard);
@@ -78,9 +72,16 @@ const Dashboard = () => {
     updatedTowers[sourceTowerIndex] = sourceTower;
     updatedTowers[destinationTowerIndex] = destinationTower;
 
+    // Reload the window after state update
+    setTimeout(() => {
+      setTowers(updatedTowers);
+      window.location.reload();
+    }, 0);
+    
     return updatedTowers;
   });
 };
+
 
   return (
     <DndContext sensors={sensors} onDragEnd={handleDragEnd}>
