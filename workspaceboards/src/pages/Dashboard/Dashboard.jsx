@@ -14,7 +14,7 @@ const Dashboard = () => {
       position: "1",
       cards: [
         { id: "1", position: "1", title: "Test Title 1", createdBy: "Test Use 1" },
-        { id: "2", position: "2", title: "Test Title 2", createdBy: "Test User 2" },
+        { id: "2", position: "2", title: "Test Title 2", createdBy: "Test Use 2" },
         { id: "3", position: "3", title: "Test Title 3", createdBy: "Test User 2" },
         { id: "4", position: "4", title: "Test Title 4", createdBy: "Test User 2" },
         { id: "5", position: "5", title: "Test Title 5", createdBy: "Test User 2" },
