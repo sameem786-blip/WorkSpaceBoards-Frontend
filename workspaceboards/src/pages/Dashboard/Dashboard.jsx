@@ -13,7 +13,7 @@ const Dashboard = () => {
       createdById: "1",
       position: "1",
       cards: [
-        { id: "1", position: "1", title: "Test Titl 1", createdBy: "Test User 1" },
+        { id: "1", position: "1", title: "Test Title 1", createdBy: "Test User 1" },
         { id: "2", position: "2", title: "Test Title 2", createdBy: "Test User 2" },
         { id: "3", position: "3", title: "Test Title 3", createdBy: "Test User 2" },
         { id: "4", position: "4", title: "Test Title 4", createdBy: "Test User 2" },
