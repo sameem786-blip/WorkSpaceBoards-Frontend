@@ -30,7 +30,7 @@ const Dashboard = () => {
         { id: "7", position: "1", title: "Test Title 1", createdBy: "Test User 1" },
         { id: "8", position: "2", title: "Test Title 2", createdBy: "Test User 2" },
         { id: "9", position: "3", title: "Test Title 3", createdBy: "Test User 2" },
-        { id: "10", position: "4", title: "Tet Title 4", createdBy: "Test User 2" },
+        { id: "10", position: "4", title: "Test Title 4", createdBy: "Test User 2" },
       ],
     },
     // Add more towers as needed
